@@ -1,0 +1,34 @@
+/*
+  Contém alguns estilos para serem usados em todas as páginas, como fontes, cores, etc.
+  Para usar, basta colocar o nome da propriedade e usar a função var() junto com o nome da variável, como por exemplo:
+    .example {
+      color: var(--clr-primaria);
+    }
+*/
+
+:root {
+  /*
+    A Roboto será usada para títulos, subtítulos, botões, etc.
+    A Rubik será usada para os textos em geral.
+  */
+  --ff-roboto-400: Roboto, sans-serif;
+  --ff-rubik-400: Rubik, sans-serif;
+
+
+  /* Paleta de cores: https://coolors.co/ffee32-ffd100-3d0066-d6d6d6-ffffff-151414-202020-333533 */
+  --clr-primaria: #ffd100;
+  --clr-secundaria: #3d0066;
+
+  /* Cores neutras e de apoio. */
+  --clr-amarelo-claro: #ffee32;
+  --clr-cinza-claro: #d6d6d6;
+  --clr-branco: #fff;
+  --clr-preto-escuro: #151414;
+  --clr-preto-neutro: #202020;
+  --clr-preto-claro: #333533;
+}
+
+/* Reseta a familia de fonte para Rubik. */
+body {
+  font-family: var(--ff-rubik-400);
+}
