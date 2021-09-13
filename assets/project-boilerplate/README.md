@@ -1,10 +1,8 @@
 # Instruções para usar o boilerplate
 
-Todas as páginas usarão esse boilerplate. Basta apenas copiar e colar o arquivo `index.html` dentro da pasta da página que será desenvolvida.
+Todas as páginas usarão esse boilerplate.
 
 **Há comentários no arquivo HTML, e qualquer dúvida é só falar.**
-
-> [Neste Notion](https://learned-quality-3cf.notion.site/Projeto-de-encerramento-do-m-dulo-2-2635f4ff21a0486fb6e96c40f86613c8) tem mais algumas informações sobre o projeto do grupo.
 
 
 ## Observações
