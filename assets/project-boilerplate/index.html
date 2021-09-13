@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="en">
+  <html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,11 +41,11 @@
     
     <!-- JS local (JS dá página vem depois daqui.). -->
   </head>
-  <body>
-    <header class="fixed-top">
-      <nav class="navbar navbar-expand-md navbar-dark bgc-navbar">
-        <div class="container">
-          <a class="navbar-brand text-uppercase logo" href="#">
+  <body class="d-flex flex-column h-100">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
           </a>
           
@@ -86,10 +86,23 @@
         </div> <!-- .container -->
       </nav>
     </header>
+
     <!-- O código dá página que será desenvolvida vem aqui. -->
 
-    <footer>
-      <!-- TODO -->
+    <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
+    <footer class="mt-auto bgc-footer">
+      <div class="container p-3 text-light">
+        <p class="text-center mb-3">
+          <a class="logo logo-sm" href="">
+            <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
+          </a>
+          <br>
+          &copy; <span id="year">2021</span> - All rights reserved
+        </p>
+        <p class="shadow text-center mx-auto mb-0 p-2 w-75 bgc-box">
+          This website uses the OMDb API but is not endorsed or certified by <a class="fw-bold text-reset text-decoration-none" href="http://www.omdbapi.com/" target="_blank" rel="noopener external">OMDb</a>.
+        </p>
+      </div>
     </footer>
   </body>
 </html>

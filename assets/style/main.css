@@ -15,7 +15,7 @@
   --ff-rubik-400: Rubik, sans-serif;
 
 
-  /* Paleta de cores: https://coolors.co/ffee32-ffd100-3d0066-d6d6d6-ffffff-151414-202020-333533 */
+  /* Paleta de cores: https://coolors.co/ffee32-ffd100-3d0066-474947-d6d6d6-ffffff-151414-202020-333533 */
   --clr-primaria: #ffd100;
   --clr-secundaria: #3d0066;
 
@@ -45,10 +45,13 @@ body {
   font-weight: 700;
   font-family: var(--ff-roboto-400);
   text-decoration: none;
+  text-transform: uppercase;
   letter-spacing: .03em;
   color: var(--clr-primaria) !important;
   transition: 250ms;
 }
+
+.logo-sm { font-size: 1.25rem; /* 20px */ }
 
 .logo > .bi-film {
   display: inline-block;
@@ -95,3 +98,5 @@ body {
 
 /* --clr-preto-neutro com opacidade. */
 .bgc-navbar { background-color: rgba(32, 32, 32, .8); } 
+.bgc-footer { background-color: var(--clr-preto-neutro); }
+.bgc-box { background-color: var(--clr-preto-escuro); }
