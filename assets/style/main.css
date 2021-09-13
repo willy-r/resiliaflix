@@ -21,6 +21,7 @@
 
   /* Cores neutras e de apoio. */
   --clr-amarelo-claro: #ffee32;
+  --clr-cinza-escuro: #474947;
   --clr-cinza-claro: #d6d6d6;
   --clr-branco: #fff;
   --clr-preto-escuro: #151414;
@@ -31,6 +32,7 @@
 /* Reseta a familia de fonte para Rubik. */
 body {
   font-family: var(--ff-rubik-400);
+  background-color: var(--clr-cinza-escuro);
 }
 
 
@@ -90,6 +92,6 @@ body {
 .ff-roboto { font-family: var(--ff-roboto-400); }
 
 .clr-primaria { color: var(--clr-primaria) !important; }
-.clr-secundaria { color: var(--clr-secundaria) !important; }
 
-.bgc-navbar { background-color: rgba(32, 32, 32, .7); }
+/* --clr-preto-neutro com opacidade. */
+.bgc-navbar { background-color: rgba(32, 32, 32, .8); } 
