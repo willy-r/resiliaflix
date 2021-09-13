@@ -32,3 +32,64 @@
 body {
   font-family: var(--ff-rubik-400);
 }
+
+
+/*
+ * Componentes.
+ */
+
+.logo {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  font-family: var(--ff-roboto-400);
+  text-decoration: none;
+  letter-spacing: .03em;
+  color: var(--clr-primaria) !important;
+  transition: 250ms;
+}
+
+.logo > .bi-film {
+  display: inline-block;
+  color: var(--clr-secundaria);
+  background-color: var(--clr-primaria);
+  line-height: 0;
+  letter-spacing: 0;
+  transform: rotate(-24deg);
+  transition: 300ms ease-in-out;
+}
+
+.logo:hover > .bi-film {
+  color: var(--clr-primaria);
+  background-color: var(--clr-secundaria);
+  transform: rotate(0);
+}
+
+.logo > .highlight {
+  display: inline-block;
+  margin-left: .125em;
+  padding: .125em;
+  color: var(--clr-secundaria);
+  line-height: 1em;
+  background-color: var(--clr-primaria);
+  border: .0833333333333333em solid var(--clr-secundaria);
+  transition: 250ms;
+}
+
+.logo:hover > .highlight {
+  color: var(--clr-primaria);
+  background-color: var(--clr-secundaria);
+  border-color: var(--clr-primaria);
+}
+
+/*
+ * Classes de ajuda.
+ */
+
+.tira-ml::after { margin-left: 0; }
+
+.ff-roboto { font-family: var(--ff-roboto-400); }
+
+.clr-primaria { color: var(--clr-primaria) !important; }
+.clr-secundaria { color: var(--clr-secundaria) !important; }
+
+.bgc-navbar { background-color: rgba(32, 32, 32, .7); }

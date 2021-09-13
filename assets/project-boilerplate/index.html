@@ -6,7 +6,7 @@
     <meta name="description" content="#TODO">
     <link rel="shortcut icon" href="#TODO" type="image/x-icon">
 
-    <title><!-- Aqui fica o título da página, tipo: ResiliaFlix | Login --></title>
+    <title></title> <!-- Aqui fica o título da página, tipo: ResiliaFlix | Login -->
 
     <!-- Google Fonts - Roboto 400 e Rubik 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,8 +42,49 @@
     <!-- JS local (JS dá página vem depois daqui.). -->
   </head>
   <body>
-    <header>
-      <!-- TODO -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark bgc-navbar">
+        <div class="container">
+          <a class="navbar-brand text-uppercase logo" href="#">
+            <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+            <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
+              <li class="nav-item">
+                <a class="nav-link active text-uppercase" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-3 clr-secundaria" href="#" title="Search for movies">
+                  <span class="bi bi-search"></span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
+                  <span class="bi bi-person-circle"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow" aria-labelledby="navbar-dropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Sign in</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sign up</a>
+                  </li>
+                </ul>
+              </li>
+            </ul> <!-- .nav-navbar -->
+          </div>
+        </div> <!-- .container -->
+      </nav>
     </header>
 
     <!-- O código dá página que será desenvolvida vem aqui. -->
