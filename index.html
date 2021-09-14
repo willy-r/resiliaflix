@@ -24,7 +24,7 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="assets/style/main.css">
-    <!-- CSS da página vem depois daqui. -->
+    <link rel="stylesheet" href="assets/style/index.css">
 
     <!-- jQuery 3.6 -->
     <script
@@ -43,7 +43,7 @@
   </head>
   <body class="d-flex flex-column h-100">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar bd-bottom-r10">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-preto-neutro bd-bottom-r10">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="/">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
@@ -90,10 +90,77 @@
       </nav>
     </header>
 
-    <!-- O código dá página que será desenvolvida vem aqui. -->
+    <main>
+      <section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner justify-content-center">
+            <div class="carousel-item active">
+              <img src="https://via.placeholder.com/500" class="d-block w-100" alt="..." style="height: 30rem; object-fit:cover;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/500" class="d-block w-100" alt="..." style="height: 30rem; object-fit:cover;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/500" class="d-block w-100" alt="..." style="height: 30rem; object-fit:cover;">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div> <!-- .carousel -->
+
+        <div class="container py-5 text-center">
+          <div class="row py-lg-5">
+            <article class="col-lg-6 col-md-8 mx-auto text-light">
+              <h1 class="fw-bold ff-roboto">Album example</h1>
+              <p class="lead">
+                Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not
+                too short so folks don’t simply skip over it entirely.
+              </p>
+              <p>
+                <a href="#movies" class="btn btn-primary my-2">See the catalog</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="movies">
+        <div>
+          <h2 class="h3 text-light">Top 12</h2>
+          <div></div> <!-- Carrosel aqui. -->
+        </div>
+        <div>
+          <h2 class="h3 text-light">Recomendações</h2>
+          <div></div> <!-- Carrosel aqui. -->
+        </div>
+      </section>
+    </main>
 
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
-    <footer class="mt-auto bd-top-r10 bgc-footer">
+    <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
         <p class="text-center m-0">
           <a class="logo logo-sm" href="/">
