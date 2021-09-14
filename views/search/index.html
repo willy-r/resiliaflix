@@ -6,7 +6,7 @@
     <meta name="description" content="#TODO">
     <link rel="shortcut icon" href="#TODO" type="image/x-icon">
 
-    <title>ResiliaFlix | Search for a movie</title>
+    <title>ResiliaFlix | Search for a Movie</title>
 
     <!-- Google Fonts - Roboto 400 e Rubik 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,9 +43,9 @@
   </head>
   <body class="d-flex flex-column h-100">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar bd-bottom-r10">
         <div class="container-fluid">
-          <a class="navbar-brand logo" href="#">
+          <a class="navbar-brand logo" href="../../">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
           </a>
           
@@ -55,16 +55,16 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link active text-uppercase" aria-current="page" href="#">Home</a>
+                <a class="nav-link text-uppercase" aria-current="page" href="../../">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="#">Movies</a>
+                <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="#">About us</a>
+                <a class="nav-link text-uppercase" href="../about-us/">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-3 clr-primaria" href="#" title="Search for movies">
+                <a class="nav-link active fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
@@ -74,10 +74,13 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow" aria-labelledby="navbar-dropdown">
                   <li>
-                    <a class="dropdown-item" href="#">Sign in</a>
+                    <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Sign up</a>
+                    <a class="dropdown-item" href="../login/">Sign in</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../register/">Sign up</a>
                   </li>
                 </ul>
               </li>
@@ -90,17 +93,14 @@
     <!-- O código dá página que será desenvolvida vem aqui. -->
 
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
-    <footer class="mt-auto bgc-footer">
-      <div class="container p-3 text-light">
-        <p class="text-center mb-3">
-          <a class="logo logo-sm" href="">
+    <footer class="mt-auto bd-top-r10 bgc-footer">
+      <div class="p-3 text-light">
+        <p class="text-center mb-0">
+          <a class="logo logo-sm" href="../../">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
           </a>
           <br>
-          &copy; <span id="year">2021</span> - All rights reserved
-        </p>
-        <p class="shadow text-center mx-auto mb-0 p-2 w-75 bgc-box">
-          This website uses the OMDb API but is not endorsed or certified by <a class="fw-bold text-reset text-decoration-none" href="http://www.omdbapi.com/" target="_blank" rel="noopener external">OMDb</a>.
+          &copy; 2021 - All rights reserved
         </p>
       </div>
     </footer>
