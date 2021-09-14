@@ -100,3 +100,13 @@ body {
 .bgc-navbar { background-color: rgba(32, 32, 32, .8); } 
 .bgc-footer { background-color: var(--clr-preto-neutro); }
 .bgc-box { background-color: var(--clr-preto-escuro); }
+
+.bd-bottom-r10 {
+  border-bottom-left-radius: .625rem !important;
+  border-bottom-right-radius: .625rem !important;
+}
+
+.bd-top-r10 {
+  border-top-left-radius: .625rem !important;
+  border-top-right-radius: .625rem !important;
+}

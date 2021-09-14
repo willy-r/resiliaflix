@@ -1,6 +1,6 @@
 # Instruções para usar o boilerplate
 
-Todas as páginas usarão esse boilerplate.
+Todas as páginas usarão esse boilerplate base, a partir dele alterações serão feitas diretamente do index.js na página que está sendo desenvolvida.
 
 **Há comentários no arquivo HTML, e qualquer dúvida é só falar.**
 
