@@ -24,7 +24,7 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <!-- CSS da página vem depois daqui. -->
+    <link rel="stylesheet" href="index.css">
 
     <!-- jQuery 3.6 -->
     <script
@@ -90,8 +90,25 @@
       </nav>
     </header>
 
-    <!-- O código dá página que será desenvolvida vem aqui. -->
-
+    <div class="container d-flex align-items-center h-100 justify-content-center mb-5 mt-5">
+      <form id="form" class="box p-5 text-light">
+        <legend class="h1 clr-primaria sign"> Sign in</legend>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" required>
+        </div>
+        <div class="mb-3 ">
+          <a href="" class="text-decoration-none clr-primaria">Forgot password?</a>
+        </div>
+       <button type="submit" class="btn botao mx-auto ">Submit</button>
+      </form>
+    </div>>
+      
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
     <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
