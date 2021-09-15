@@ -96,14 +96,38 @@
     <div id="contSearch">
       <div id="searchCamp">
          <input type="text" id="search"> 
-         <button id="btn-search">Search</button>
+         <button id="btn-search" data-bs-toggle="modal" data-bs-target="#modalResults">Search</button>
          
       </div>
+      
       <section id="results">
-        <img id="imgResultado" src="">
-        <p id="info"></p>
+        
+        
       </section>
+      <div class="modal fade" id="modalResults" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="movieName">Teste</h5>
+                
+              
+            </div>
 
+            <div class="modal-body">
+              <img id="imgResultado" src="">
+              <p id="info"></p>
+              <p id="erro"></p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn  btn-danger" data-bs-dismiss="modal">close</button>
+              
+            </div>
+
+
+          </div>
+        </div>
+    </div>
     </div>
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
     <footer class="mt-auto bd-top-r10 bgc-footer">
