@@ -25,6 +25,7 @@
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
     <!-- CSS da página vem depois daqui. -->
+    <link rel="stylesheet" href="index.css">
 
     <!-- jQuery 3.6 -->
     <script
@@ -40,6 +41,7 @@
     </script>
     
     <!-- JS local (JS dá página vem depois daqui.). -->
+    <script src="index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -92,8 +94,15 @@
 
     <!-- O código dá página que será desenvolvida vem aqui. -->
     <div id="contSearch">
-          
-
+      <div id="searchCamp">
+         <input type="text" id="search"> 
+         <button id="btn-search">Search</button>
+         
+      </div>
+      <section id="results">
+        <img id="imgResultado" src="">
+        <p id="info"></p>
+      </section>
 
     </div>
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
