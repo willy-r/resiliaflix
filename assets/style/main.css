@@ -86,6 +86,32 @@ body {
   border-color: var(--clr-primaria);
 }
 
+.botao {
+  background-image: linear-gradient(to right, var(--clr-secundaria) 0%, var(--clr-primaria) 51%, var(--clr-secundaria) 100%)
+}
+
+.botao {
+  margin: 10px;
+  padding: 8px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.557);
+  border-radius: 10px;
+  display: block;
+  margin-top: 20px;
+}
+
+.botao:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+
 /*
  * Classes de ajuda.
  */
