@@ -1,2 +1,16 @@
-/* CSS da página home. */
- 
+.img-cartao {
+  height: 18.75rem;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.img-cartao:hover { filter: opacity(.7); }
+
+.cursor-grab { cursor: grab; }
+
+.move-direita > span:nth-child(2) {
+  cursor: default;
+  transition: 250ms;
+}
+.move-direita:hover > span:nth-child(2) { padding-left: 10px; }

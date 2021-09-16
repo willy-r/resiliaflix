@@ -119,10 +119,12 @@ body {
 .tira-ml::after { margin-left: 0; }
 
 .ff-roboto { font-family: var(--ff-roboto-400); }
+.ff-rubik { font-family: var(--ff-rubik-400); }
 
 .clr-primaria { color: var(--clr-primaria) !important; }
 
 .bgc-preto-neutro { background-color: var(--clr-preto-neutro); }
+.bgc-preto-escuro { background-color: var(--clr-preto-escuro); }
 
 .bd-bottom-r10 {
   border-bottom-left-radius: .625rem !important;

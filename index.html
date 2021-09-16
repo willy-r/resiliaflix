@@ -22,6 +22,18 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+    <!-- Owl Carousel CSS 2.3.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous">
+
     <!-- CSS local. -->
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/index.css">
@@ -38,8 +50,16 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
       crossorigin="anonymous">
     </script>
+
+    <!-- Owl Carousel JS 2.3.4 -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous">
+    </script>
     
-    <!-- JS local (JS dá página vem depois daqui.). -->
+    <!-- JS local. -->
+    <script src="assets/js/index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -147,14 +167,341 @@
         </div>
       </section>
 
-      <section class="container" id="movies">
-        <div>
-          <h2 class="h3 text-light">Top 12</h2>
-          <div></div> <!-- Carrosel aqui. -->
+      <section class="container-md container-fluid" id="movies">
+        <div class="text-light mb-5">
+          <h2 class="h3 fw-bold mb-4 ff-roboto move-direita">
+            <span class="bi bi-bookmark-heart fs-2 clr-primaria"></span> <span>Top 12</span>
+          </h2>
+          
+          <div class="owl-carousel owl-theme p-4 rounded bgc-preto-escuro" id="top12-carousel">
+            <article class="card bg-transparent border-0 ">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 fs-md-6 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+            
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+          </div> <!-- #top12-carousel -->
         </div>
-        <div>
-          <h2 class="h3 text-light">Recomendações</h2>
-          <div></div> <!-- Carrosel aqui. -->
+
+        <div class="text-light mb-5">
+          <h2 class="h3 fw-bold mb-4 ff-roboto move-direita">
+            <span class="bi bi-bookmark-star fs-2 clr-primaria"></span> <span>Recent movies</span>
+          </h2>
+          
+          <div class="owl-carousel owl-theme p-4 rounded bgc-preto-escuro" id="filmes-recentes-carousel">
+            <article class="card bg-transparent border-0 ">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 fs-md-6 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+            
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+          </div> <!-- #filmes-recentes-carousel -->
+        </div>
+        
+        <div class="text-light mb-5">
+          <h2 class="h3 fw-bold mb-4 ff-roboto move-direita">
+            <span class="bi bi-bookmark-check fs-2 clr-primaria"></span> <span>Recommendations</span>
+          </h2>
+          
+          <div class="owl-carousel owl-theme p-4 rounded bgc-preto-escuro" id="filmes-recentes-carousel">
+            <article class="card bg-transparent border-0 ">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 fs-md-6 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+            
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+
+            <article class="card bg-transparent border-0">
+              <img class="rounded img-cartao" src="https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg" alt="Poster do filme" data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria" title="Harry Potter and the Sorcerer's Stone">
+              <main class="card-body px-1 pb-0 cursor-grab">
+                <h3 class="card-title mb-0 text-truncate fs-5 ff-roboto" title="Harry Potter and the Sorcerer's Stone">
+                  Harry Potter and the Sorcerer's Stone
+                </h3>
+              </main>
+              <footer class="card-footer border-top-0 bg-transparent px-1 cursor-grab">
+                <span class="me-2">2001</span>
+                <span><span class="bi bi-clock"></span> 1h 54min.</span>
+              </footer>
+            </article>
+          </div> <!-- #filmes-recentes-carousel -->
         </div>
       </section>
     </main>
