@@ -42,6 +42,7 @@
     
     <!-- JS local (JS dá página vem depois daqui.). -->
     <script src="index.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -96,33 +97,18 @@
     <div id="contSearch">
       <div id="searchCamp">
          <input type="text" id="search"> 
-         <button id="btn-search" data-bs-toggle="modal" data-bs-target="#modalResults">Search</button>
-         
+         <button id="btn-search">Search</button>   
       </div>
       
-      <section id="results">
-        
-        
-      </section>
+      <div class="container">
+        <div id="movies" class="row"></div>
+        <p id="erro"></p>
+      </div>
+
       <div class="modal fade" id="modalResults" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="movieName">Teste</h5>
-                
-              
-            </div>
-
-            <div class="modal-body">
-              <img id="imgResultado" src="">
-              <p id="info"></p>
-              <p id="erro"></p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn  btn-danger" data-bs-dismiss="modal">close</button>
-              
-            </div>
+          <div class="modal-content" id="info">
+            
 
 
           </div>
