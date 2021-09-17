@@ -1,3 +1,4 @@
+// Ações que são ativadas após o carregamento do DOM.
 $(() => {
   // Ativa todos os tooltips dos carrosséis.
   $('[data-bs-toggle="tooltip"]').tooltip();
