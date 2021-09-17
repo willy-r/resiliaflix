@@ -19,7 +19,7 @@ class Filme {
           dadosDoFilme.Director,
           dadosDoFilme.Actors, // Uma string separando os nomes dos atores por vírgula.
           dadosDoFilme.Poster,
-          dadosDoFilme.Ratings, // Uma lista de diferentes sites de avaliação.
+          dadosDoFilme.imdbRating,
         ];
         
         // Cria instância de Filme.
@@ -46,7 +46,7 @@ class Filme {
     this.diretor = diretor;
     this.elenco = elenco;
     this.img = img;
-    this.avaliacao = this._avaliacaoPorcentagem(avaliacao);
+    this.avaliacao = avaliacao;
     this.trailer = null; // É definido posteriormente.
   }
   
@@ -77,17 +77,5 @@ class Filme {
           minutosFormatado = minutos.toString().padStart(2, '0');
     
     return `${horas}h ${minutosFormatado}min.`;
-  }
-  
-  /**
-   * Pega a porcentagem do Rotten Tomatoes no formato '0%'.
-   * 
-   * @param {{Source: string, Value: string}[]} avaliacaoArr
-   * @returns {string}
-   */
-  _avaliacaoPorcentagem(avaliacaoArr) {
-    const avaliacaoObj = avaliacaoArr.find((obj) => obj.Source.toLowerCase() === 'rotten tomatoes');
-
-    return avaliacaoObj.Value;
   }
 }
