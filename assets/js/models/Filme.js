@@ -18,6 +18,7 @@ class Filme {
 
         // Pega alguns dados da resposta.
         const dadosDoFilme = [
+          dados.imdbID,
           dados.Title,
           dados.Year,
           dados.Runtime,
@@ -39,7 +40,8 @@ class Filme {
     $.get(configs);
   }
 
-  constructor(titulo, ano, duracao, direcao, elenco, img, avaliacao) {
+  constructor(id, titulo, ano, duracao, direcao, elenco, img, avaliacao) {
+    this.id = id;
     this.titulo = titulo;
     this.ano = ano;
     this.duracao = this._formataDuracao(duracao);

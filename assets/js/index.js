@@ -41,4 +41,4 @@ setTimeout(() => {
   
   // Ativa todos os tooltips dos carrosséis.
   $('[data-bs-toggle="tooltip"]').tooltip();
-}, 200);
+}, 100);

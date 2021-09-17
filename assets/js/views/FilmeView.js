@@ -1,6 +1,31 @@
 /** Manipula as diversas formas de ver o filme no HTML. */
 class FilmeView {
   /**
+   * Cria o cartão que envolverá o conteúdo dos filmes.
+   * 
+   * @param {string} id ID do filme.
+   * @returns {HTMLElement} O cartão do filme.
+   */
+  static criaCartaoFilme(id) {
+    const cartao = document.createElement('article');
+
+    cartao.className = 'card bg-transparent border-0';
+    cartao.id = id;
+
+    return cartao;
+  }
+
+  /**
+   * Insere o cartão no carrosel.
+   * 
+   * @param {HTMLElement} cartao O cartão a ser inserido no carrosel.
+   * @param {HTMLDivElement} carroselElement A div que receberá o cartão.
+   */
+   static insereCartaoNoCarrosel(cartao, carroselElement) {
+    carroselElement.appendChild(cartao);
+  }
+
+  /**
    * @param {Filme} filmeModel
    */
   constructor(filmeModel) {
@@ -16,14 +41,12 @@ class FilmeView {
   }
 
   /**
-   * Cria um cartão do filme com algumas informações.
+   * Insere o conteúdo do filme no cartão.
+   * Não usa todas as informações do filme.
    * 
-   * @returns {HTMLElement} O cartão com as informações do filme.
+   * @param {HTMLElement} cartao Elemento contendo o cartão.
    */
-  criaCartaoFilme() {
-    const cartao = document.createElement('article');
-
-    cartao.className = 'card bg-transparent border-0';
+  insereConteudoNoCartao(cartao) {
     cartao.innerHTML = `
       <img
         class="rounded img-cartao"
@@ -41,17 +64,5 @@ class FilmeView {
         <span><span class="bi bi-clock"></span> ${this.model.duracao}</span>
       </footer>
     `;
-
-    return cartao;
-  }
-
-  /**
-   * Insere o cartão no carrosel.
-   * 
-   * @param {HTMLElement} cartao O cartão a ser inserido no carrosel.
-   * @param {HTMLDivElement} carroselElement A div que receberá o cartão.
-   */
-  insereCartaoNoCarrosel(cartao, carroselElement) {
-    carroselElement.appendChild(cartao);
   }
 }
