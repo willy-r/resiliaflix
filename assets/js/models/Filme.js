@@ -24,7 +24,7 @@ class Filme {
         
         // Cria instância de Filme.
         const filme = new Filme(...dados);
-        // Chama callback passando o objeto como parâmetro.
+        // Chama callback passando o objeto Filme como parâmetro.
         cbSucesso(filme);
       },
     };
@@ -74,7 +74,7 @@ class Filme {
     
     const horas = parseInt(horasFracao), // Transforma em horas.
           minutos = parseInt((horasFracao % 1) * 60), // Transforma em minutos.
-          minutosFormatado = minutos.toString().length === 1 ? '0' + minutos : minutos;
+          minutosFormatado = minutos.toString().padStart(2, '0');
     
     return `${horas}h ${minutosFormatado}min.`;
   }
