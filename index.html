@@ -59,8 +59,9 @@
     </script>
     
     <!-- JS local. -->
-    <script src="assets/js/models/Filme.js" defer></script>
-    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/models/Filme.js"></script>
+    <script src="assets/js/views/FilmeView.js"></script>
     <script src="assets/js/index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
@@ -77,13 +78,19 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link active text-uppercase" aria-current="page" href="./">Home</a>
+                <a class="nav-link active text-uppercase" aria-current="page" href="./">
+                  <span class="bi bi-house"></span> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="#movies">Movies</a>
+                <a class="nav-link text-uppercase" href="#movies">
+                  <span class="bi bi-film"></span> Movies
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="views/about-us/">About us</a>
+                <a class="nav-link text-uppercase" href="views/about-us/">
+                  <span class="bi bi-people"></span> About us
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-3 clr-primaria" href="views/search/" title="Search for movies">
@@ -99,10 +106,14 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="views/login/">Sign In</a>
+                    <a class="dropdown-item" href="views/login/">
+                      Sign In <span class="bi bi-person-fill"></span>
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="views/register/">Sign Up</a>
+                    <a class="dropdown-item" href="views/register/">
+                      Sign Up <span class="bi bi-person-plus-fill"></span>
+                    </a>
                   </li>
                 </ul>
               </li>
