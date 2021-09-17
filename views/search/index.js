@@ -17,7 +17,7 @@ function getMovies(searchText) {
 
     success: function (dados) {
       if(dados.Response == "False") {
-        $('#movies').html("<h2>Movie not found!</h2>")
+        $('#movies').html("<h2 class='d-flex justify-content-center'>Movie not found!</h2>")
       } else {
       console.log(dados);
       let movies = dados.Search;
@@ -26,9 +26,9 @@ function getMovies(searchText) {
 
         output += `
             <div class="col-md-3">
-              <div class="well text-center ">
-                <img src="${movie.Poster}">
-                <h5>${movie.Title}</h5>
+              <div class="well text-center movieInfo">                
+                <img src="${movie.Poster}">                
+                <h5 class="title">${movie.Title}</h5>
                 <a onclick="movieSelected('${movie.imdbID}')" class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#modalResults">Movie Details</a>
               </div>
             </div>

@@ -1,30 +1,45 @@
 #searchCamp {
-    margin: 30vh 40vw;
+    margin-top: 15vh;
 }
 
 #results {
     display: flex;
+}
 
+#image {
+    margin-bottom: 8px;
 }
 
 #info {
     background: white;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
+.title {
+    color: white;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+.movieInfo {
+    margin: 10px;   
+    padding: 5px;
+}
+
+
 #movies img, #movie img{
-   height: 300px;
-    
+   height: 250px;    
   }
   
-  @media(min-width:960px){
+  @media(min-width:700px){
     #movies .col-md-3 .well{
       height: 390px;
     }
   
     #movies .col-md-3 img{
-      height: 300px ;      
+      height: 300px ;
+      
     }
   }

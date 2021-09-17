@@ -29,7 +29,7 @@ function getMovie() {
         
         <div class="modal-body" id="md-body">
 
-                <div id="image">
+                <div id="image" class="d-flex justify-content-center" >
                     <img id="imgResultado" src="${movie.Poster}">
                 </div>
 
