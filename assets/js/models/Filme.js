@@ -20,6 +20,7 @@ class Filme {
         const dadosDoFilme = [
           dados.imdbID,
           dados.Title,
+          dados.Plot,
           dados.Year,
           dados.Runtime,
           dados.Director, // Uma string separando os nomes dos diretores por vírgula.
@@ -40,9 +41,10 @@ class Filme {
     $.get(configs);
   }
 
-  constructor(id, titulo, ano, duracao, direcao, elenco, img, avaliacao) {
+  constructor(id, titulo, sinopse, ano, duracao, direcao, elenco, img, avaliacao) {
     this.id = id;
     this.titulo = titulo;
+    this.sinopse = sinopse;
     this.ano = ano;
     this.duracao = this._formataDuracao(duracao);
     this.direcao = direcao;
