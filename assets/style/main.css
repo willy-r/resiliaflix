@@ -113,6 +113,13 @@ body {
 
 
 /*
+ * Alterações no Bootstrap (afeta apenas o header).
+ */
+
+.dropdown-item:active { background-color: var(--clr-secundaria) !important; }
+
+
+/*
  * Classes de ajuda.
  */
 
@@ -134,4 +141,9 @@ body {
 .bd-top-r10 {
   border-top-left-radius: .625rem !important;
   border-top-right-radius: .625rem !important;
+}
+
+#auth-logout {
+  display: none;
+  cursor: pointer;
 }

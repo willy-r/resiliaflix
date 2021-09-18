@@ -61,8 +61,11 @@
     <!-- JS local. -->
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/models/Filme.js"></script>
+    <script src="assets/js/models/Usuario.js"></script>
     <script src="assets/js/views/FilmeView.js"></script>
+    <script src="assets/js/views/UsuarioView.js"></script>
     <script src="assets/js/controllers/FilmeController.js"></script>
+    <script src="assets/js/controllers/UsuarioController.js"></script>
     <script src="assets/js/index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
@@ -98,7 +101,7 @@
                   <span class="bi bi-search"></span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="auth">
                 <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
                   <span class="bi bi-person-circle"></span>
                 </a>
@@ -117,6 +120,9 @@
                     </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item" id="auth-logout" title="Click to Sign Out">
+                <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
               </li>
             </ul>
           </div>
