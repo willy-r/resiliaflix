@@ -20,11 +20,28 @@ class FilmeController {
 
       Filme.buscaFilmeNaAPI(url, (filmeObj) => {
         const view = new FilmeView(filmeObj);
-        // Inserse o conteúdo no cartão certo que já está criado no DOM.
         view.insereConteudoNoCartao(cartao);
-        
-        cartao.querySelector('.img-cartao').addEventListener('click', () => console.log('Cliquei!')); // @TODO
-      }, (dados) => console.log(dados.Error));
+
+        FilmeController._addListenerNaImagem($(cartao).children('.img-cartao'));
+
+        // Verifica se foi o último filme, se sim, ativa tudo!
+        if (i + 1 === idsFilmes.length)
+          ativaCarroseis();
+          ativaTooltips();
+      });
     }
+  }
+
+  static _addListenerNaImagem(cartaoImg) {
+    cartaoImg.click((event) => {
+      if (Usuario.estaLogado()) {
+        // Faz requisição pra pegar as infos do filme, e mostra no modal.
+        console.log('Está logado, mostra modal!');
+      } else {
+        // Impede que o modal abra.
+        event.stopPropagation();
+        redirecionaParaPagina('views/login/');
+      }
+    });
   }
 }

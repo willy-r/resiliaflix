@@ -116,7 +116,8 @@ body {
  * Alterações no Bootstrap (afeta apenas o header).
  */
 
-.dropdown-item:active { background-color: var(--clr-secundaria) !important; }
+.dropdown-item:active,
+.dropdown-item.active { background-color: var(--clr-secundaria) !important; }
 
 
 /*

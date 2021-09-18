@@ -42,7 +42,6 @@ class FilmeView {
 
   /**
    * Insere o conteúdo do filme no cartão.
-   * Não usa todas as informações do filme.
    * 
    * @param {HTMLElement} cartao Elemento contendo o cartão.
    */
@@ -51,7 +50,9 @@ class FilmeView {
       <img
         class="rounded img-cartao"
         src="${this.model.img}" alt="Poster do filme ${this.model.titulo}"
-        data-bs-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria"
+        data-tooltip-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria"
+        data-bs-toggle="modal" data-bs-target="#filme-info-modal"
+        data-titulo="${this.model.titulo}" data-filme-id="${this.model.id}"
         title="${this.model.titulo}"
       >
       <main class="card-body px-1 pb-0 cursor-grab">
