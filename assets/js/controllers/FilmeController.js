@@ -47,30 +47,33 @@ class FilmeController {
         // Com a view atual, toda a informação do filme clicado também estará disponível
         // é só passar para o modal nesse caso e depois tratar o clique do botão que mostrará
         // o trailer, nesse caso será necessário fazer uma requisição para buscar o trailer.
-        const modal = $('#info-filme-interface')[0],
-              trailerModal = $('#trailer-filme-modal')[0],
-              trailerModalInterface = $('#trailer-filme-interface')[0];
+        const modal = $('#info-filme-interface')[0];
 
         filmeView.insereConteudoNoModal(modal);
 
-        if (filmeView.model.jaTemTrailer()) {
-          $('#ver-trailer').click(() => {
-            filmeView.insereTrailerNoModal(trailerModalInterface);
-            paraVideoQuandoFechaModal(trailerModal);
-          });
-        } else {
-          filmeView.model.buscaTrailerNoYT(() => {
-            $('#ver-trailer').click(() => {
-              filmeView.insereTrailerNoModal(trailerModalInterface);
-              paraVideoQuandoFechaModal(trailerModal);
-            });
-          });
-        }
+        if (filmeView.model.jaTemTrailer())
+          FilmeController._trataCliqueBotaoTrailer();
+        else
+          filmeView.model.buscaTrailerNoYT(FilmeController._trataCliqueBotaoTrailer);
       } else {
         // Impede que o modal abra.
         event.stopPropagation();
         redirecionaParaPagina('views/login/');
       }
+    });
+  }
+
+  /**
+   * Trata o clique no botão de ver trailer do modal.
+   * Insere o trailer no modal e aplica lógica para parar o vídeo quando fechar modal.
+   */
+  static _trataCliqueBotaoTrailer() {
+    const trailerModal = $('#trailer-filme-modal')[0],
+          trailerModalInterface = $('#trailer-filme-interface')[0];
+    
+    $('#ver-trailer').click(() => {
+      filmeView.insereTrailerNoModal(trailerModalInterface);
+      paraVideoQuandoFechaModal(trailerModal);
     });
   }
 }

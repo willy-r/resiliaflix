@@ -151,6 +151,7 @@ body {
   background: url(../images/bg-modal.jpg) center/cover no-repeat;
   filter: blur(3px);
 }
+.bg-img.trailer { z-index: initial; }
 
 
 /*

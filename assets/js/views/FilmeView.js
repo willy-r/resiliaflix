@@ -141,10 +141,12 @@ class FilmeView {
           <button class="btn-close bg-light" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
         </header>
         
-        <main class="container-fluid modal-body d-flex align-items-center rounded shadow-sm">
-          <div class="bg-img"></div>
-          <iframe class="w-100 rounded shadow trailer-modal" id="trailer-filme" src="${this.model.trailer}" title="Trailer of the movie ${this.model.titulo}" frameborder="0" allowfullscreen>
-          </iframe>
+        <main class="modal-body rounded shadow-sm">
+          <div class="container-fluid d-flex align-items-center p-3 h-100">
+            <div class="bg-img trailer"></div>
+            <iframe class="w-100 rounded trailer-modal" id="trailer-filme" src="${this.model.trailer}" title="Trailer of the movie ${this.model.titulo}" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
         </main>
         
         <footer class="modal-footer border-top-0">

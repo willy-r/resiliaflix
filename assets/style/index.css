@@ -15,6 +15,7 @@
 .img-modal:hover { transform: scale(1.05); }
 
 .trailer-modal {
+  position: relative;
   z-index: 1;
   min-height: 60vh;
 }
@@ -33,6 +34,7 @@
 .move-esquerda:hover > span,
 .move-esquerda:focus > span { padding-left: 5px; }
 
+
 /*
  * Alterações no Bootstrap da página home.
  */
@@ -47,6 +49,7 @@
 }
 
 .card {
+  position: relative;
   padding: 1rem;
   z-index: 1;
 }
