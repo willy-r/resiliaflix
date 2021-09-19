@@ -14,7 +14,14 @@
 }
 .img-modal:hover { transform: scale(1.05); }
 
-.cursor-grab { cursor: grab; }
+.trailer-modal {
+  z-index: 1;
+  min-height: 60vh;
+}
+
+@media (max-width: 420px) {
+  .trailer-modal { min-height: 50vh; }
+}
 
 .move-direita > span:nth-child(2) {
   cursor: default;
@@ -26,4 +33,20 @@
 .move-esquerda:hover > span,
 .move-esquerda:focus > span { padding-left: 5px; }
 
-.trailer-modal { min-height: 60vh; }
+/*
+ * Alterações no Bootstrap da página home.
+ */
+
+@media (min-width: 768px) and (max-width: 992px)  {
+  .modal-dialog { max-width: 800px; }
+}
+
+.modal-body {
+  padding: 0;
+  border: 1px solid rgba(222, 226, 230, .4);
+}
+
+.card {
+  padding: 1rem;
+  z-index: 1;
+}

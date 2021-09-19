@@ -81,9 +81,10 @@ body {
 .logo > .bi-film {
   display: inline-block;
   color: var(--clr-secundaria);
-  background-color: var(--clr-primaria);
   line-height: 0;
   letter-spacing: 0;
+  background-color: var(--clr-primaria);
+  border-radius: .125em;
   transform: rotate(-24deg);
   transition: 300ms ease-in-out;
 }
@@ -139,6 +140,17 @@ body {
 /* Normalmente se for colocar um ícone no botão ele altera de acordo. */
 .botao:hover > span,
 .botao:hover > i { color: var(--clr-primaria); }
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-modal.jpg) center/cover no-repeat;
+  filter: blur(3px);
+}
 
 
 /*

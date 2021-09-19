@@ -18,7 +18,7 @@ function constroiURLValida(urlBase, params) {
 function ativaCarroseis() {
   $('.owl-carousel').owlCarousel({
     loop: true,
-    margin: 15,
+    margin: 10,
     dots: false,
     slideBy: 3,
     mouseDrag: false,
