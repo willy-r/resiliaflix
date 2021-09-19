@@ -2,7 +2,7 @@
  * Monta uma URL válida com a url base passada e os parâmetros.
  * 
  * @param {string} urlBase
- * @param {{string: string}} params Um objeto contendo os parâmetros e seus valores.
+ * @param {{any: string}} params Um objeto contendo os parâmetros e seus valores.
  * @returns {string} Uma string representando a URL resultante.
  */
 function constroiURLValida(urlBase, params) {
@@ -55,6 +55,13 @@ function ativaCarroseis() {
 /** Ativa todos os tooltips do Bootstrap. */
 function ativaTooltips() {
   $('[data-tooltip-toggle="tooltip"]').tooltip();
+}
+
+function paraVideoQuandoFechaModal(modal) {
+  $(modal).on('hidden.bs.modal', () => {
+    const iframe = $(modal).find('#trailer-filme');
+    iframe.removeAttr('src');
+  });
 }
 
 /**

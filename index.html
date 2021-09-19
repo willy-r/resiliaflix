@@ -131,45 +131,13 @@
     </header>
 
     <!-- Modal para mostrar as informações do filme. -->
-    <div class="modal fade" id="filme-info-modal" tabindex="-1" aria-labelledby="filme-info-label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
-        <dialog class="modal-content">
-          <header class="modal-header">
-            <h5 class="modal-title" id="filme-info-label">Modal title</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </header>
-          
-          <main class="modal-body">
-            <h1>Olá mundo!</h1>
-          </main>
-          
-          <footer class="modal-footer">
-            <button class="btn btn-primary text-uppercase" type="button"  data-bs-target="#filme-trailer-modal" data-bs-toggle="modal" data-bs-dismiss="modal">
-              Ver trailer
-            </button>
-          </footer>
-        </dialog>
+    <div class="modal fade" id="info-filme-modal" tabindex="-1" aria-labelledby="info-filme-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered" id="info-filme-interface">
       </div>
     </div>
     <!-- Modal para mostrar o trailer do filme. -->
-    <div class="modal fade" id="filme-trailer-modal" tabindex="-1" aria-labelledby="filme-trailer-label" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
-        <dialog class="modal-content">
-          <header class="modal-header">
-            <h5 class="modal-title" id="filme-trailer-label">Trailer</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </header>
-          
-          <main class="modal-body">
-            <h1>Segundo modal!</h1>
-          </main>
-          
-          <footer class="modal-footer">
-            <button class="btn btn-primary" type="button"  data-bs-target="#filme-info-modal" data-bs-toggle="modal" data-bs-dismiss="modal">
-              Save changes
-            </button>
-          </footer>
-        </dialog>
+    <div class="modal fade" id="trailer-filme-modal" tabindex="-1" aria-labelledby="trailer-filme-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered" id="trailer-filme-interface">
       </div>
     </div>
 
@@ -239,7 +207,6 @@
           </h2>
           
           <div class="owl-carousel owl-theme p-4 rounded bgc-preto-escuro" id="top12">
-            <!-- Os filmes do top 12 ficarão aqui. -->
           </div> <!-- #top12-carousel -->
         </div>
 

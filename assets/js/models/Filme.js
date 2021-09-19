@@ -3,9 +3,9 @@ class Filme {
   /**
    * Função estática para buscar um filme na API da url passada.
    * 
-   * @param {string} url 
-   * @param {Function} cbSucesso 
-   * @param {Function} cbErro 
+   * @param {string} url URL para fazer a requisição.
+   * @param {Function} cbSucesso Callback passado para usar os dados do filme.
+   * @param {Function} cbErro Callback passado para tratar o erro se o filme não for encontrado.
    */
   static buscaFilmeNaAPI(url, cbSucesso, cbErro) {
     const configs = {
@@ -34,7 +34,6 @@ class Filme {
         // Chama callback passando o objeto Filme como parâmetro.
         cbSucesso(filme);
       },
-      error: cbErro,
     };
 
     // Usa ajax para fazer a requisição, welcome to callback hell.
@@ -42,7 +41,7 @@ class Filme {
   }
 
   constructor(id, titulo, sinopse, ano, duracao, direcao, elenco, img, avaliacao) {
-    this.id = id;
+    this._id = id;
     this.titulo = titulo;
     this.sinopse = sinopse;
     this.ano = ano;
@@ -51,6 +50,19 @@ class Filme {
     this.elenco = elenco;
     this.img = img;
     this.avaliacao = avaliacao;
+    this._trailer = null;
+  }
+
+  get id() {
+    return this._id;
+  }
+
+  get trailer() {
+    return this._trailer;
+  }
+
+  set trailer(novoTrailer) {
+    this._trailer = novoTrailer;
   }
 
   /**
@@ -70,5 +82,44 @@ class Filme {
           minutosFormatado = minutos.toString().padStart(2, '0');
     
     return `${horas}h ${minutosFormatado}min.`;
+  }
+
+  /**
+   * Busca o trailer no YouTube do filme instânciado.
+   * 
+   * @param {Function} cbSucesso Callback para usar a URL do trailer.
+   * @param {Function} cbErro Callback para tratar o erro se o trailer pro filme não for encontrado.
+   */
+  buscaTrailerNoYT(cbSucesso, cbErro) {
+    const url = constroiURLValida('https://www.googleapis.com/youtube/v3/search', {
+      key: 'AIzaSyAwTIb2IGTSb-859pULEu8kkY5OSCqXDog',
+      type: 'video',
+      q: `${this.titulo} original trailer`,
+    });
+    
+    const configs = {
+      url: url,
+      success: (dados) => {
+        // Pega o ID do primeiro vídeo.
+        const idTrailer = dados.items[0].id.videoId,
+              urlTrailer = constroiURLValida(`https://www.youtube-nocookie.com/embed/${idTrailer}`, {
+                autoplay: '1',
+              });
+        
+        // Passa a url do trailer pro filme.
+        this.trailer = urlTrailer;
+        // Chama callback passando a URL do trailer como argumento (pra fazer algo a mais se quiser).
+        cbSucesso(urlTrailer);
+      },
+      error: cbErro,
+    };
+
+    // Callback hell de novo, welcome.
+    $.get(configs);
+  }
+
+  /** Verifica se o filme já tem trailer, se sim retorna true. */
+  jaTemTrailer() {
+    return this.trailer !== null;
   }
 }
