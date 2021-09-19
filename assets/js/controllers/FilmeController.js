@@ -54,7 +54,6 @@ class FilmeController {
         filmeView.insereConteudoNoModal(modal);
 
         if (filmeView.model.jaTemTrailer()) {
-          console.log('Já tem trailer');
           $('#ver-trailer').click(() => {
             filmeView.insereTrailerNoModal(trailerModalInterface);
             paraVideoQuandoFechaModal(trailerModal);
@@ -62,7 +61,6 @@ class FilmeController {
         } else {
           filmeView.model.buscaTrailerNoYT(() => {
             $('#ver-trailer').click(() => {
-              console.log('Cliquei');
               filmeView.insereTrailerNoModal(trailerModalInterface);
               paraVideoQuandoFechaModal(trailerModal);
             });

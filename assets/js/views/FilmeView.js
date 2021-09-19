@@ -85,7 +85,7 @@ class FilmeView {
           <div class="container-fluid card border-0">
             <div class="row g-0">
               <div class="col-md-4 align-self-center d-flex justify-content-center">
-                <img class="img-fluid rounded shadow" id="img-modal" src="${this.model.img}" alt="Poster do filme ${this.model.titulo}">
+                <img class="img-fluid rounded shadow img-modal" src="${this.model.img}" alt="Poster do filme ${this.model.titulo}">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -135,12 +135,12 @@ class FilmeView {
       <dialog class="modal-content">
         <header class="modal-header">
           <h4 class="modal-title text-uppercase ff-roboto" id="trailer-filme-label">
-            Trailer: ${this.model.titulo}
+            <span class="fw-bold">Trailer:</span> ${this.model.titulo}
           </h4>
           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
         </header>
         
-        <main class="modal-body p3">
+        <main class="d-flex align-items-center modal-body p3">
           <iframe class="w-100 rounded shadow trailer-modal" id="trailer-filme" src="${this.model.trailer}" title="Trailer of the movie ${this.model.titulo}" frameborder="0" allowfullscreen>
           </iframe>
         </main>

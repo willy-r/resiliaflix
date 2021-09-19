@@ -7,6 +7,13 @@
 
 .img-cartao:hover { filter: opacity(.7); }
 
+.img-modal {
+  height: 22rem;
+  object-fit: cover;
+  transition: 300ms cubic-bezier(.34,-1.24,.66,2.2);
+}
+.img-modal:hover { transform: scale(1.05); }
+
 .cursor-grab { cursor: grab; }
 
 .move-direita > span:nth-child(2) {
@@ -18,8 +25,5 @@
 .move-esquerda > span { transition: 300ms cubic-bezier(.34,-1.24,.66,2.2); }
 .move-esquerda:hover > span,
 .move-esquerda:focus > span { padding-left: 5px; }
-
-#img-modal { transition: 300ms cubic-bezier(.34,-1.24,.66,2.2); }
-#img-modal:hover { transform: scale(1.05); }
 
 .trailer-modal { min-height: 60vh; }

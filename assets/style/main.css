@@ -27,12 +27,37 @@
   --clr-preto-escuro: #151414;
   --clr-preto-neutro: #202020;
   --clr-preto-claro: #333533;
+
+  --bs-scrollbar: inset 0 0 6px rgba(0,0,0,0.3);
+  --bs-botao: 0 0 .5em rgba(255, 255, 255, 0.557);
+
+  --radius-padrao: .625rem;
 }
 
-/* Reseta a familia de fonte para Rubik. */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-secundaria) var(--clr-cinza-claro);
+}
+
 body {
   font-family: var(--ff-rubik-400);
   background-color: var(--clr-cinza-escuro);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: .625rem;
+  background-color: var(--clr-cinza-claro);
+  -webkit-box-shadow: var(--bs-scrollbar);
+          box-shadow: var(--bs-scrollbar);
+}
+
+::-webkit-scrollbar { width: .625rem; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: .625rem;
+  background-image: linear-gradient(to top, var(--clr-secundaria) 0%, var(--clr-primaria) 100%);
+  -webkit-box-shadow: var(--bs-scrollbar);
+          box-shadow: var(--bs-scrollbar);
 }
 
 
@@ -85,31 +110,35 @@ body {
   background-color: var(--clr-secundaria);
   border-color: var(--clr-primaria);
 }
+  
 
 .botao {
-  background-image: linear-gradient(to right, var(--clr-secundaria) 0%, var(--clr-primaria) 51%, var(--clr-secundaria) 100%)
-}
-
-.botao {
-  margin: 10px;
-  padding: 8px 25px;
+  display: block;
+  padding: .5em 1.5625em;
+  font-size: 1rem; /* 16px */
+  color: var(--clr-branco);
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
+  background-image: linear-gradient(to right, var(--clr-secundaria) 0%, var(--clr-primaria) 50%, var(--clr-secundaria) 100%);
   background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 7px rgba(255, 255, 255, 0.557);
-  border-radius: 10px;
-  display: block;
-  margin-top: 20px;
+  border-radius: var(--radius-padrao);
+  box-shadow: var(--bs-botao);
+  transition: 500ms;
 }
 
 .botao:hover {
+  color: var(--clr-branco);
   background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }
+
+.botao > span {
+  color: var(--clr-secundaria);
+  transition: 250ms;
+}
+
+/* Normalmente se for colocar um ícone no botão ele altera de acordo. */
+.botao:hover > span,
+.botao:hover > i { color: var(--clr-primaria); }
 
 
 /*
@@ -148,3 +177,5 @@ body {
   display: none;
   cursor: pointer;
 }
+
+.abaixo-header { margin-top: 5rem; }
