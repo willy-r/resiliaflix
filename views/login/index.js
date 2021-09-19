@@ -4,3 +4,7 @@ $('#form').submit((event) => {
   Usuario.logaUsuario();
   redirecionaParaPagina('../../');
 })
+
+// Usuários.
+UsuarioController.alteraPaginaQuandoDeslogaUsuario();
+UsuarioController.alteraPaginaUsuarioLogado();

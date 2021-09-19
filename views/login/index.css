@@ -1,16 +1,19 @@
 .box {
-    background-color: black;
-    margin-top: 70px;
-    background: rgba(10, 10, 10, 0.486);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.986);
-    border-radius: 10px;
+  background-color: var(--clr-preto-neutro);
+  box-shadow: 0 0 7px var(--clr-preto-escuro);
+  border-radius: var(--radius-padrao);
 }
 
-.sign {
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--clr-secundaria)
+.titulo-form {
+  font-family: var(--ff-roboto-400);
+  font-weight: 900;
+  text-transform: uppercase;
 }
-.btn:focus:not(:focus-visible){
-    outline: none;
-    box-shadow:0 0 7px rgba(255, 255, 255, 0.557); 
+
+.btn:focus {
+  outline: none;
+  box-shadow: var(--bs-botao); 
 }
+
+.text-hover { transition: 300ms; }
+.text-hover:hover { opacity: .6; }
