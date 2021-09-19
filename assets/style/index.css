@@ -17,7 +17,7 @@
 .trailer-modal {
   position: relative;
   z-index: 1;
-  min-height: 60vh;
+  min-height: 55vh;
 }
 
 @media (max-width: 420px) {

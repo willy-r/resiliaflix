@@ -5,7 +5,7 @@ class Filme {
    * 
    * @param {string} url URL para fazer a requisição.
    * @param {Function} cbSucesso Callback passado para usar os dados do filme.
-   * @param {Function} cbErro Callback passado para tratar o erro se o filme não for encontrado.
+   * @param {Function} cbErro Callback para tratar erro na requisição.
    */
   static buscaFilmeNaAPI(url, cbSucesso, cbErro) {
     const configs = {
@@ -88,7 +88,7 @@ class Filme {
    * Busca o trailer no YouTube do filme instânciado.
    * 
    * @param {Function} cbSucesso Callback para usar a URL do trailer.
-   * @param {Function} cbErro Callback para tratar o erro se o trailer pro filme não for encontrado.
+   * @param {Function} cbErro Callback para tratar erro na requisição.
    */
   buscaTrailerNoYT(cbSucesso, cbErro) {
     const url = constroiURLValida('https://www.googleapis.com/youtube/v3/search', {

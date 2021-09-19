@@ -130,7 +130,11 @@ class FilmeView {
     `);
   }
 
-  /** Insere o trailer no modal. */
+  /**
+   * Insere o trailer no modal. 
+   * 
+   * @param {HTMLElement} modal Componente do modal.
+   */
   insereTrailerNoModal(modal) {
     $(modal).html(`
       <dialog class="modal-content bg-dark text-light shadow">
@@ -146,6 +150,41 @@ class FilmeView {
             <div class="bg-img trailer"></div>
             <iframe class="w-100 rounded trailer-modal" id="trailer-filme" src="${this.model.trailer}" title="Trailer of the movie ${this.model.titulo}" frameborder="0" allowfullscreen>
             </iframe>
+          </div>
+        </main>
+        
+        <footer class="modal-footer border-top-0">
+          <button class="btn text-uppercase move-esquerda botao" type="button"  data-bs-target="#info-filme-modal" data-bs-toggle="modal" data-bs-dismiss="modal">
+            Back <span class="bi bi-arrow-return-left"></span>
+          </button>
+        </footer>
+      </dialog>
+    `);
+  }
+
+  /**
+   * Mostra erro se a requisição do trailer falhar.
+   * 
+   * @param {HTMLElement} modal Componente do modal.
+   */
+  mostraErroTrailer(modal) {
+    $(modal).html(`
+      <dialog class="modal-content bg-dark text-light shadow">
+        <header class="modal-header border-bottom-0">
+          <h4 class="modal-title text-uppercase ff-roboto" id="trailer-filme-label">
+            <span class="fw-bold clr-primaria">Trailer:</span> ${this.model.titulo}
+          </h4>
+          <button class="btn-close bg-light" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </header>
+        
+        <main class="modal-body rounded shadow-sm">
+          <div class="container-fluid d-flex align-items-center p-3 h-100">
+            <div class="bg-img trailer"></div>
+            <div class="d-flex justify-content-center align-items-center w-100 trailer-modal">
+              <h3 class="text-danger text-center fw-bold display-2 mx-2">
+                Trailer unvailable.
+              </h3>
+            </div>
           </div>
         </main>
         
