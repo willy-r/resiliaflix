@@ -148,8 +148,6 @@
             <button class="active" type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="4" aria-label="Slide 5"></button>
           </div>
           
           <div class="carousel-inner">
@@ -176,22 +174,6 @@
                 <p class="lead">Some representative placeholder content for the first slide.</p>
               </figcaption>
             </figure>
-
-            <figure class="carousel-item">
-              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
-              <figcaption class="carousel-caption d-none d-md-block">
-                <h2 class="display-4 ff-roboto">Fourty slide label</h2>
-                <p class="lead">Some representative placeholder content for the first slide.</p>
-              </figcaption>
-            </figure>
-
-            <figure class="carousel-item">
-              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
-              <figcaption class="carousel-caption d-none d-md-block">
-                <h2 class="display-4 ff-roboto">Fivety slide label</h2>
-                <p class="lead">Some representative placeholder content for the first slide.</p>
-              </figcaption>
-            </figure>
           </div>
 
           <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-principal" data-bs-slide="prev">
@@ -207,76 +189,66 @@
 
         <div class="d-flex align-items-center flex-column px-4 py-5 my-5 text-center text-white position-relative">
           <div class="bg-img principal"></div>
-          <h1 class="display-5 fw-bold ff-roboto clr-primaria">Centered hero</h1>
+          <h1 class="display-5 fw-bold ff-roboto clr-primaria">
+            Welcome to ResiliaFlix
+          </h1>
           
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">
-              Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open
-              source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful
-              JavaScript plugins.
+              The universe of movies, watch and share movies with everyone, anytime, anywhere and everything for free! <strong class="clr-primaria">ResiliaFlix</strong> is a website of movies that priorizes you. Be happy, be safe, grab some popcorn and watch a movie right now!
             </p>
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
               <a class="btn botao botao-lg" href="./#movies" role="button">
                 See our catalog
               </a>
-              <a class="btn botao botao-lg" href="views/search" role="button">
-                Search for a movie
-              </a>
+              <button class="btn botao botao-lg" type="button" data-bs-toggle="collapse" data-bs-target="#pricing" aria-expanded="false" aria-controls="pricing">
+                See our pricing
+              </button>
             </div>
             <div class="my-4 linha-h linha-h-menor"></div>
           </div>
 
-          <div class="container row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="collapse container row justify-content-around row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-3 text-center" id="pricing">
             <div class="col">
-              <div class="card mb-4 bg-dark rounded-3 shadow-sm">
-                <div class="card-header py-3">
+              <article class="card mb-4 bg-dark border-transparent rounded-3 shadow-sm">
+                <header class="card-header border-light py-3">
                   <h4 class="my-0 fw-bold">Free</h4>
-                </div>
-                <div class="card-body">
-                  <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+                </header>
+                <main class="card-body">
+                  <h2 class="card-title w-bold clr-primaria">
+                    $0<small class="text-muted fw-light">/mo</small>
+                  </h2>
                   <ul class="list-unstyled mt-3 mb-4">
-                    <li>10 users included</li>
-                    <li>2 GB of storage</li>
+                    <li>3 users included</li>
+                    <li>5 downloads/user</li>
+                    <li>Watch any movie</li>
                     <li>Email support</li>
                     <li>Help center access</li>
                   </ul>
-                  <button type="button" class="w-100 btn botao">Sign up for free</button>
-                </div>
-              </div>
+                  <a class="w-100 btn botao" href="views/register/">Sign up for free</a>
+                </main>
+              </article>
             </div>
+
             <div class="col">
-              <div class="card mb-4 bg-dark rounded-3 shadow-sm">
-                <div class="card-header py-3">
-                  <h4 class="my-0 fw-bold">Pro</h4>
-                </div>
-                <div class="card-body">
-                  <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+              <artcle class="card mb-3 bg-dark border-light rounded-3 shadow-sm">
+                <header class="card-header border-light py-3">
+                  <h4 class="my-0 fw-bold">Pro (optional)</h4>
+                </header>
+                <main class="card-body">
+                  <h2 class="card-title fw-bold clr-primaria">
+                    $10<small class="text-muted fw-light">/mo</small>
+                  </h2>
                   <ul class="list-unstyled mt-3 mb-4">
-                    <li>20 users included</li>
-                    <li>10 GB of storage</li>
+                    <li>5 users included</li>
+                    <li>10 downloads/user</li>
+                    <li>Watch any movie in <strong class="clr-primaria">HD</strong></li>
                     <li>Priority email support</li>
                     <li>Help center access</li>
                   </ul>
-                  <button type="button" class="btn w-100 botao">Get started</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card mb-4 rounded-3 bg-dark shadow-sm">
-                <div class="card-header py-3 text-white">
-                  <h4 class="my-0 fw-bold">Enterprise</h4>
-                </div>
-                <div class="card-body">
-                  <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li>30 users included</li>
-                    <li>15 GB of storage</li>
-                    <li>Phone and email support</li>
-                    <li>Help center access</li>
-                  </ul>
-                  <button type="button" class="btn w-100 botao">Contact us</button>
-                </div>
-              </div>
+                  <a class="btn w-100 botao" href="views/register">Get started</a>
+                </main>
+              </artcle>
             </div>
           </div>
         </div>

@@ -54,10 +54,10 @@ class FilmeController {
         filmeView.insereConteudoNoModal(modal);
 
         if (filmeView.model.jaTemTrailer())
-          FilmeController._trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer);
+          FilmeController._trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer, filmeView);
         else
           filmeView.model.buscaTrailerNoYT(
-            () => FilmeController._trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer),
+            () => FilmeController._trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer, filmeView),
             () => filmeView.mostraErroTrailer(interfaceModalTrailer),
           );
       } else {
@@ -71,10 +71,14 @@ class FilmeController {
   /**
    * Trata o clique no botão de ver trailer do modal.
    * Insere o trailer no modal e aplica lógica para parar o vídeo quando fechar modal.
+   * 
+   * @param {HTMLElement} modalTrailer
+   * @param {HTMLElement} interfaceModalTrailer
+   * @param {FilmeView} view
    */
-  static _trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer) {
+  static _trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer, view) {
     $('#ver-trailer').click(() => {
-      filmeView.insereTrailerNoModal(interfaceModalTrailer);
+      view.insereTrailerNoModal(interfaceModalTrailer);
       paraVideoQuandoFechaModal(modalTrailer);
     });
   }

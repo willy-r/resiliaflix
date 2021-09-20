@@ -61,7 +61,7 @@ class FilmeView {
       </main>
       <footer class="card-footer border-top-0 bg-transparent px-1">
         <span class="me-2">${this.model.ano}</span>
-        <span><span class="bi bi-clock"></span> ${this.model.duracao}</span>
+        <span><span class="bi bi-clock clr-primaria"></span> ${this.model.duracao}</span>
       </footer>
     `);
   }
@@ -73,7 +73,7 @@ class FilmeView {
    */
   insereConteudoNoModal(modal) {
     $(modal).html(`
-      <dialog class="modal-content bg-dark text-light shadow">
+      <dialog class="modal-content bg-dark text-light shadow" open>
         <header class="modal-header border-bottom-0">
           <h4 class="modal-title text-uppercase fw-bold ff-roboto clr-primaria" id="info-filme-label">
             About the movie
@@ -137,7 +137,7 @@ class FilmeView {
    */
   insereTrailerNoModal(modal) {
     $(modal).html(`
-      <dialog class="modal-content bg-dark text-light shadow">
+      <dialog class="modal-content bg-dark text-light shadow" open>
         <header class="modal-header border-bottom-0">
           <h4 class="modal-title text-uppercase ff-roboto" id="trailer-filme-label">
             <span class="fw-bold clr-primaria">Trailer:</span> ${this.model.titulo}
