@@ -91,6 +91,7 @@ class Filme {
    * @param {Function} cbErro Callback para tratar erro na requisição.
    */
   buscaTrailerNoYT(cbSucesso, cbErro) {
+    // 100 requisições por dia.
     const url = constroiURLValida('https://www.googleapis.com/youtube/v3/search', {
       key: 'AIzaSyAwTIb2IGTSb-859pULEu8kkY5OSCqXDog',
       type: 'video',

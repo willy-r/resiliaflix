@@ -26,27 +26,32 @@
   min-height: 55vh;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 26.25em) {
   .trailer-modal { min-height: 50vh; }
+}
+
+.img-carrosel {
+  height: 35rem;
+  object-fit: cover;
 }
 
 .move-direita > span:nth-child(2) {
   cursor: default;
   transition: 250ms;
 }
-.move-direita:hover > span:nth-child(2) { padding-left: 10px; }
+.move-direita:hover > span:nth-child(2) { padding-left: .625rem; }
 
 .move-esquerda > span { transition: 300ms cubic-bezier(.34,-1.24,.66,2.2); }
 .move-esquerda:hover > span,
-.move-esquerda:focus > span { padding-left: 5px; }
+.move-esquerda:focus > span { padding-left: .3125rem; }
 
 
 /*
  * Alterações no Bootstrap da página home.
  */
 
-@media (min-width: 768px) and (max-width: 992px)  {
-  .modal-dialog { max-width: 800px; }
+@media (min-width: 48em) and (max-width: 62em)  {
+  .modal-dialog { max-width: 50rem; }
 }
 
 .modal-body {

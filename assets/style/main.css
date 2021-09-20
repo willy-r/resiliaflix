@@ -111,7 +111,6 @@ body {
   background-color: var(--clr-secundaria);
   border-color: var(--clr-primaria);
 }
-  
 
 .botao {
   display: block;
@@ -130,6 +129,17 @@ body {
 .botao:hover {
   color: var(--clr-branco);
   background-position: right center;
+}
+
+.botao:focus {
+  outline: none;
+  box-shadow: var(--bs-botao); 
+}
+
+.botao.botao-lg { font-size: 1.2rem; /* 19px */ }
+
+@media (max-width: 30em) {
+  .botao.botao-lg { font-size: 1rem; }
 }
 
 .botao > span {
@@ -152,6 +162,25 @@ body {
   filter: blur(3px);
 }
 .bg-img.trailer { z-index: initial; }
+.bg-img.principal {
+  background-image: url(../images/bg-principal.jpg);
+  background-attachment: fixed;
+}
+
+.linha-h::after {
+  content: '';
+  display: block;
+  width: 45%;
+  text-align: left;
+  border-bottom: 1px solid rgba(214, 214, 214, .5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linha-h.linha-h-menor::after { 
+  border-width: 3px;
+  width: 30%;
+}
 
 
 /*

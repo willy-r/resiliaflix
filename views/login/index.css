@@ -10,10 +10,5 @@
   text-transform: uppercase;
 }
 
-.btn:focus {
-  outline: none;
-  box-shadow: var(--bs-botao); 
-}
-
 .text-hover { transition: 300ms; }
 .text-hover:hover { opacity: .6; }

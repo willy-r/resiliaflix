@@ -141,63 +141,146 @@
       </div>
     </div>
 
-    <main>
+    <main class="mb-5">
       <section>
-        <div class="carousel slide" id="carousel-principal" data-interval="3000" data-bs-ride="carousel">
+        <div class="carousel slide carousel-fade" id="carrossel-principal" data-bs-interval="3000" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carousel-principal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button class="active" type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carrossel-principal" data-bs-slide-to="4" aria-label="Slide 5"></button>
           </div>
           
-          <div class="carousel-inner justify-content-center">
+          <div class="carousel-inner">
             <figure class="carousel-item active">
-              <img src="https://via.placeholder.com/500" class="d-block w-100" alt="..." style="height: 30rem; object-fit:cover;">
+              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
               <figcaption class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h2 class="display-4 ff-roboto">First slide label</h2>
+                <p class="lead">Some representative placeholder content for the first slide.</p>
               </figcaption>
             </figure>
+
             <figure class="carousel-item">
-              <img src="https://via.placeholder.com/500" class="d-block w-100" alt="..." style="height: 30rem; object-fit:cover;">
+              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
               <figcaption class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h2 class="display-4 ff-roboto">Second slide label</h2>
+                <p class="lead">Some representative placeholder content for the first slide.</p>
               </figcaption>
             </figure>
+
             <figure class="carousel-item">
-              <img src="https://via.placeholder.com/500" class="d-block w-100" alt="..." style="height: 30rem; object-fit:cover;">
+              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
               <figcaption class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h2 class="display-4 ff-roboto">Third slide label</h2>
+                <p class="lead">Some representative placeholder content for the first slide.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="carousel-item">
+              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
+              <figcaption class="carousel-caption d-none d-md-block">
+                <h2 class="display-4 ff-roboto">Fourty slide label</h2>
+                <p class="lead">Some representative placeholder content for the first slide.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="carousel-item">
+              <img class="d-block w-100 img-carrosel" src="https://via.placeholder.com/500" alt="...">
+              <figcaption class="carousel-caption d-none d-md-block">
+                <h2 class="display-4 ff-roboto">Fivety slide label</h2>
+                <p class="lead">Some representative placeholder content for the first slide.</p>
               </figcaption>
             </figure>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-principal" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-principal" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carousel-principal" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carrossel-principal" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div> <!-- .carousel -->
+        </div> <!-- #carrosel-principal -->
+        <div class="mt-5 linha-h"></div>
 
-        <div class="container py-5 text-center">
-          <div class="row py-lg-5">
-            <article class="col-lg-6 col-md-8 mx-auto text-light">
-              <h1 class="fw-bold ff-roboto">Album example</h1>
-              <p class="lead">
-                Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not
-                too short so folks don’t simply skip over it entirely.
-              </p>
-              <p>
-                <a href="#movies" class="btn btn-primary my-2">See the catalog</a>
-              </p>
-            </article>
+        <div class="d-flex align-items-center flex-column px-4 py-5 my-5 text-center text-white position-relative">
+          <div class="bg-img principal"></div>
+          <h1 class="display-5 fw-bold ff-roboto clr-primaria">Centered hero</h1>
+          
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+              Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open
+              source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful
+              JavaScript plugins.
+            </p>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+              <a class="btn botao botao-lg" href="./#movies" role="button">
+                See our catalog
+              </a>
+              <a class="btn botao botao-lg" href="views/search" role="button">
+                Search for a movie
+              </a>
+            </div>
+            <div class="my-4 linha-h linha-h-menor"></div>
+          </div>
+
+          <div class="container row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 bg-dark rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-bold">Free</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>10 users included</li>
+                    <li>2 GB of storage</li>
+                    <li>Email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="w-100 btn botao">Sign up for free</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 bg-dark rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-bold">Pro</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>20 users included</li>
+                    <li>10 GB of storage</li>
+                    <li>Priority email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="btn w-100 botao">Get started</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 bg-dark shadow-sm">
+                <div class="card-header py-3 text-white">
+                  <h4 class="my-0 fw-bold">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>30 users included</li>
+                    <li>15 GB of storage</li>
+                    <li>Phone and email support</li>
+                    <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="btn w-100 botao">Contact us</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="mb-5 linha-h"></div>
       </section>
 
       <section class="container-md container-fluid" id="movies">
