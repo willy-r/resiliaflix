@@ -26,7 +26,7 @@ class FilmeController {
 
         // Verifica se foi o último filme, se sim, ativa tudo!
         if (i + 1 === idsFilmes.length) {
-          ativaCarroseis();
+          ativaCarrossel(carrosel);
           ativaTooltips();
         }
       });

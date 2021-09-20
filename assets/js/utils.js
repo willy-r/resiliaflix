@@ -14,9 +14,13 @@ function constroiURLValida(urlBase, params) {
   return url.toString();
 }
 
-/** Ativa todos os carroseis da página atual. */
-function ativaCarroseis() {
-  $('.owl-carousel').owlCarousel({
+/** 
+ * Ativa o carrosel atual.
+ * 
+ * @param {HTMLElement} carrosel Elemento do carrosel.
+ */
+function ativaCarrossel(carrosel) {
+  $(carrosel).owlCarousel({
     loop: true,
     margin: 10,
     dots: false,
@@ -52,7 +56,7 @@ function ativaCarroseis() {
   });
 }
 
-/** Ativa todos os tooltips do Bootstrap. */
+/** Ativa todos os tooltips da página atual. */
 function ativaTooltips() {
   $('[data-tooltip-toggle="tooltip"]').tooltip();
 }
