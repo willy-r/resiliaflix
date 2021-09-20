@@ -82,7 +82,7 @@ class FilmeView {
         </header>
         
         <main class="modal-body rounded shadow-sm h-100">
-          <div class="container-fluid card border-0 bg-transparent">
+          <div class="container-fluid card border-0 bg-transparent cartao-modal">
             <div class="bg-img"></div>
             <div class="row g-0">
               <div class="col-md-4 align-self-center d-flex justify-content-center">

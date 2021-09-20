@@ -7,6 +7,12 @@
 
 .img-cartao:hover { filter: opacity(.7); }
 
+.cartao-modal {
+  position: relative;
+  padding: 1rem;
+  z-index: 1;
+}
+
 .img-modal {
   height: 22rem;
   object-fit: cover;
@@ -46,10 +52,4 @@
 .modal-body {
   padding: 0;
   border: 1px solid rgba(222, 226, 230, .4);
-}
-
-.card {
-  position: relative;
-  padding: 1rem;
-  z-index: 1;
 }
