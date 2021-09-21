@@ -158,12 +158,12 @@ body {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: url(../images/bg-modal.jpg) center/cover no-repeat;
+  background: url(../images/home/bg-modal.jpg) center/cover no-repeat;
   filter: blur(3px);
 }
 .bg-img.trailer { z-index: initial; }
 .bg-img.principal {
-  background-image: url(../images/bg-principal.jpg);
+  background-image: url(../images/home/bg-principal.jpg);
   background-attachment: fixed;
 }
 

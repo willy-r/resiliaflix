@@ -1,9 +1,7 @@
 function movieSelected(id) {
-    sessionStorage.setItem('movieId', id);
-    getMovie()
-    return;
+  sessionStorage.setItem('movieId', id);
+  getMovie();
 }
-
 
 function getMovie() {
 

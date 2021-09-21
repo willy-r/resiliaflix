@@ -1,13 +1,20 @@
-$(document).ready(() => {
-  $('#btn-search').on('click', (e) => {
-    let searchText = $('#search').val();
-    getMovies(searchText);
+$('#btn-search').click(() => {
+  const searchText = $('#search').val();
 
-  });
+  getMovies(searchText);
 });
 
+/**
+ * Faz uma requisição e mostra todos os filmes encontrados,
+ * se não mostra uma mensagem de erro.
+ * 
+ * @param {string} searchText Nome do filme para ser buscado.
+ */
 function getMovies(searchText) {
-  let url = `https://www.omdbapi.com/?apikey=42d7f882&s=${searchText}`
+  const url = constroiURLValida('https://www.omdbapi.com/', {
+    apikey: '42d7f882',
+    s: searchText,
+  });
 
   $.ajax({
     url: url,
@@ -41,3 +48,7 @@ function getMovies(searchText) {
     }
   }})
 }
+
+// Usuários.
+UsuarioController.alteraPaginaQuandoDeslogaUsuario();
+UsuarioController.alteraPaginaUsuarioLogado();
