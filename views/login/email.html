@@ -6,7 +6,7 @@
     <meta name="description" content="#TODO">
     <link rel="shortcut icon" href="#TODO" type="image/x-icon">
 
-    <title>ResiliaFlix | About Us</title>
+    <title>ResiliaFlix | Sign In</title>
 
     <!-- Google Fonts - Roboto 400 e Rubik 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <!-- CSS da página vem depois daqui. -->
+    <link rel="stylesheet" href="index.css">
 
     <!-- jQuery 3.6 -->
     <script
@@ -40,6 +40,7 @@
     </script>
     
     <!-- JS local (JS dá página vem depois daqui.). -->
+    <script src="index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -61,7 +62,7 @@
                 <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-uppercase" href="../about-us/">About us</a>
+                <a class="nav-link text-uppercase" href="../about-us/">About us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-3 clr-primaria" href="../search/" title="Search for movies">
@@ -77,7 +78,7 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../login/">Sign in</a>
+                    <a class="dropdown-item active" href="../login/">Sign in</a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="../register/">Sign up</a>
@@ -90,30 +91,25 @@
       </nav>
     </header>
 
-    <!-- O código dá página que será desenvolvida vem aqui. -->
-    
-  <div class="container h-100 d-flex justify-content-center align-items-center">
-      <div class="row">
+    <div class="container d-flex align-items-center h-100 justify-content-center mb-5 mt-5">
+      <form id="form1" class="box p-5 text-light">
+        <legend class="h1 clr-primaria sign"> Reset your password</legend>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          <div id="emailHelp" class="form-text text-success d-none" >Check your email.</div>
+          
+        </div>
+
+       <button id="btn" type="submit" class="btn botao mx-auto "
+       value="true">Submit</button>
+     
+
         
-        <div class="col-3 grid">
-          <img src="us/william-rodrigues.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="col-3 grid">
-          <img src="us/leticia-bedoni.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="col-3 grid">
-          <img src="us/jean-ramalho.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="col-3 grid">
-          <img src="us/michael-ferreira.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
+      </form>
+    </div>>
+      
+      
     <footer class="mt-auto bd-top-r10 bgc-footer">
       <div class="p-3 text-light">
         <p class="text-center mb-0">
