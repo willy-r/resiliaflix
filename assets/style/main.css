@@ -27,12 +27,37 @@
   --clr-preto-escuro: #151414;
   --clr-preto-neutro: #202020;
   --clr-preto-claro: #333533;
+
+  --bs-scrollbar: inset 0 0 6px rgba(0,0,0,0.3);
+  --bs-botao: 0 0 .5em rgba(255, 255, 255, 0.557);
+
+  --radius-padrao: .625rem;
 }
 
-/* Reseta a familia de fonte para Rubik. */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-secundaria) var(--clr-cinza-claro);
+}
+
 body {
   font-family: var(--ff-rubik-400);
   background-color: var(--clr-cinza-escuro);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: .625rem;
+  background-color: var(--clr-cinza-claro);
+  -webkit-box-shadow: var(--bs-scrollbar);
+          box-shadow: var(--bs-scrollbar);
+}
+
+::-webkit-scrollbar { width: .625rem; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: .625rem;
+  background-image: linear-gradient(to top, var(--clr-secundaria) 0%, var(--clr-primaria) 100%);
+  -webkit-box-shadow: var(--bs-scrollbar);
+          box-shadow: var(--bs-scrollbar);
 }
 
 
@@ -56,9 +81,10 @@ body {
 .logo > .bi-film {
   display: inline-block;
   color: var(--clr-secundaria);
-  background-color: var(--clr-primaria);
   line-height: 0;
   letter-spacing: 0;
+  background-color: var(--clr-primaria);
+  border-radius: .125em;
   transform: rotate(-24deg);
   transition: 300ms ease-in-out;
 }
@@ -87,29 +113,82 @@ body {
 }
 
 .botao {
-  background-image: linear-gradient(to right, var(--clr-secundaria) 0%, var(--clr-primaria) 51%, var(--clr-secundaria) 100%)
-}
-
-.botao {
-  margin: 10px;
-  padding: 8px 25px;
+  display: block;
+  padding: .5em 1.5625em;
+  font-size: 1rem; /* 16px */
+  color: var(--clr-branco);
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
+  background-image: linear-gradient(to right, var(--clr-secundaria) 0%, var(--clr-primaria) 50%, var(--clr-secundaria) 100%);
   background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 7px rgba(255, 255, 255, 0.557);
-  border-radius: 10px;
-  display: block;
-  margin-top: 20px;
+  border-radius: var(--radius-padrao);
+  box-shadow: var(--bs-botao);
+  transition: 500ms;
 }
 
 .botao:hover {
+  color: var(--clr-branco);
   background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }
+
+.botao:focus {
+  outline: none;
+  box-shadow: var(--bs-botao); 
+}
+
+.botao.botao-lg { font-size: 1.2rem; /* 19px */ }
+
+@media (max-width: 30em) {
+  .botao.botao-lg { font-size: 1rem; }
+}
+
+.botao > span {
+  color: var(--clr-secundaria);
+  transition: 250ms;
+}
+
+/* Normalmente se for colocar um ícone no botão ele altera de acordo. */
+.botao:hover > span,
+.botao:hover > i { color: var(--clr-primaria); }
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-modal.jpg) center/cover no-repeat;
+  filter: blur(3px);
+}
+.bg-img.trailer { z-index: initial; }
+.bg-img.principal {
+  background-image: url(../images/bg-principal.jpg);
+  background-attachment: fixed;
+}
+
+.linha-h::after {
+  content: '';
+  display: block;
+  width: 45%;
+  text-align: left;
+  border-bottom: 1px solid rgba(214, 214, 214, .5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linha-h.linha-h-menor::after { 
+  border-width: 3px;
+  width: 30%;
+}
+
+
+/*
+ * Alterações no Bootstrap (afeta apenas o header).
+ */
+
+.dropdown-item:active,
+.dropdown-item.active { background-color: var(--clr-secundaria) !important; }
 
 
 /*
@@ -119,13 +198,12 @@ body {
 .tira-ml::after { margin-left: 0; }
 
 .ff-roboto { font-family: var(--ff-roboto-400); }
+.ff-rubik { font-family: var(--ff-rubik-400); }
 
 .clr-primaria { color: var(--clr-primaria) !important; }
 
-/* --clr-preto-neutro com opacidade. */
-.bgc-navbar { background-color: rgba(32, 32, 32, .8); } 
-.bgc-footer { background-color: var(--clr-preto-neutro); }
-.bgc-box { background-color: var(--clr-preto-escuro); }
+.bgc-preto-neutro { background-color: var(--clr-preto-neutro); }
+.bgc-preto-escuro { background-color: var(--clr-preto-escuro); }
 
 .bd-bottom-r10 {
   border-bottom-left-radius: .625rem !important;
@@ -136,3 +214,10 @@ body {
   border-top-left-radius: .625rem !important;
   border-top-right-radius: .625rem !important;
 }
+
+#auth-logout {
+  display: none;
+  cursor: pointer;
+}
+
+.abaixo-header { margin-top: 5rem; }

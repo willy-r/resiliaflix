@@ -2,7 +2,7 @@
   "files": [
     "README.md"
   ],
-  "imageSize": 100,
+  "imageSize": 150,
   "commit": false,
   "contributors": [
     {
@@ -52,5 +52,6 @@
   "projectOwner": "willy-r",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "contributorsSortAlphabetically": true
 }

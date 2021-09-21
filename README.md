@@ -1,13 +1,24 @@
+<p align="center">
+  <img src="assets/images/logo.svg" alt="ResiliaFlix logo">
+</p>
+
 # ResiliaFlix
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Projeto final do módulo 02 pela Resilia.
+Project of the module 2 for Resilia.
+
+
+## About
+
+ResiliaFlix is a website of movies that priorizes you. Be happy, be safe and watch a movie right now!
+
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks to all members of the group 2, you're all incredible:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -25,5 +36,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

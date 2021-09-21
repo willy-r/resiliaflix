@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="#TODO">
-    <link rel="shortcut icon" href="#TODO" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
     <title>ResiliaFlix | Sign In</title>
 
@@ -39,12 +38,16 @@
       crossorigin="anonymous">
     </script>
     
-    <!-- JS local (JS dá página vem depois daqui.). -->
-    <script defer src="index.js"></script>
+    <!-- JS local. -->
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/models/Usuario.js"></script>
+    <script src="../../assets/js/views/UsuarioView.js"></script>
+    <script src="../../assets/js/controllers/UsuarioController.js"></script>
+    <script src="index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar bd-bottom-r10">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-preto-neutro bd-bottom-r10">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="../../">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
@@ -56,20 +59,26 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" aria-current="page" href="../../">Home</a>
+                <a class="nav-link text-uppercase" aria-current="page" href="../../">
+                  <span class="bi bi-house"></span> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
+                <a class="nav-link text-uppercase" href="../../#movies">
+                  <span class="bi bi-film"></span> Movies
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../about-us/">About us</a>
+                <a class="nav-link text-uppercase" href="../about-us/">
+                  <span class="bi bi-people"></span> About us
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="auth">
                 <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
                   <span class="bi bi-person-circle"></span>
                 </a>
@@ -78,12 +87,19 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item active" href="../login/">Sign in</a>
+                    <a class="dropdown-item active" href="../login/">
+                      Sign in <span class="bi bi-person-fill"></span>
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../register/">Sign up</a>
+                    <a class="dropdown-item" href="../register/">
+                      Sign up <span class="bi bi-person-plus-fill"></span>
+                    </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item" id="auth-logout" title="Click to Sign Out">
+                <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
               </li>
             </ul>
           </div>
@@ -91,27 +107,35 @@
       </nav>
     </header>
 
-    <div class="container d-flex align-items-center h-100 justify-content-center mb-5 mt-5">
-      <form id="form" class="box p-5 text-light">
-        <legend class="h1 clr-primaria sign"> Sign in</legend>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <main class="container d-flex align-items-center justify-content-center abaixo-header">
+      <form class="p-5 text-light my-5 box" id="form">
+        <legend class="h1 clr-primaria titulo-form">Sign in</legend>
+        
+        <fieldset class="form-group mb-3">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-control" id="email" type="email" placeholder="example@domain.com" aria-describedby="email-help" required>
+          <p class="form-text mb-0" id="email-help">
+            We'll never share your email with anyone else.
+          </p>
+        </fieldset>
+        <fieldset class="form-group mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input class="form-control" id="password" type="password" required>
+        </fieldset>
+        <div class="mb-4">
+          <a href="../password-reset/" class="text-decoration-none clr-primaria text-hover" title="Click here to reset password">
+            Forgot password?
+          </a>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" required>
-        </div>
-        <div class="mb-3 ">
-          <a href="email.html" class="text-decoration-none clr-primaria">Forgot password?</a>
-        </div>
-       <button type="submit" class="btn botao mx-auto ">Submit</button>
+
+        <button class="btn mx-auto botao" type="submit">
+          Submit <span class="bi bi-box-arrow-in-right"></span>
+        </button>
       </form>
-    </div>>
+    </main>
       
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
-    <footer class="mt-auto bd-top-r10 bgc-footer">
+    <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
         <p class="text-center mb-0">
           <a class="logo logo-sm" href="../../">
