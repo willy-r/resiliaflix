@@ -15,6 +15,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/leticia-souza04/"><img src="https://avatars.githubusercontent.com/u/88463815?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Letícia Bedoni de Azevedo</b></sub></a><br /><a href="#ideas-leticiabedoni" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/willy-r/resiliaflix/commits?author=leticiabedoni" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Maicon-MK"><img src="https://avatars.githubusercontent.com/u/88468371?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maicon - MK</b></sub></a><br /><a href="#ideas-Maicon-MK" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/willy-r/resiliaflix/commits?author=Maicon-MK" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/jeanramalho"><img src="https://avatars.githubusercontent.com/u/72111010?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jean Ramalho</b></sub></a><br /><a href="#ideas-jeanramalho" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/willy-r/resiliaflix/commits?author=jeanramalho" title="Code">💻</a></td>
+    <td align="center"><a href="https://willy-r.github.io/portfolio-feliz/"><img src="https://avatars.githubusercontent.com/u/47596121?v=4?s=100" width="100px;" alt=""/><br /><sub><b>William Rodrigues</b></sub></a><br /><a href="#ideas-willy-r" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/willy-r/resiliaflix/pulls?q=is%3Apr+reviewed-by%3Awilly-r" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/willy-r/resiliaflix/commits?author=willy-r" title="Code">💻</a></td>
   </tr>
 </table>
 
