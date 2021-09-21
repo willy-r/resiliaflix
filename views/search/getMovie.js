@@ -9,7 +9,7 @@ function getMovie() {
 
     let movieId = sessionStorage.getItem('movieId');
 
-    let url = `http://www.omdbapi.com/?apikey=42d7f882&i=${movieId}`
+    let url = `https://www.omdbapi.com/?apikey=42d7f882&i=${movieId}`
 
 
     $.ajax({
