@@ -15,6 +15,16 @@
         "review",
         "code"
       ]
+    },
+    {
+      "login": "jeanramalho",
+      "name": "Jean Ramalho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72111010?v=4",
+      "profile": "https://github.com/jeanramalho",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
