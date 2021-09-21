@@ -1,0 +1,14 @@
+.box {
+  background-color: var(--clr-preto-neutro);
+  box-shadow: 0 0 7px var(--clr-preto-escuro);
+  border-radius: var(--radius-padrao);
+}
+
+.titulo-form {
+  font-family: var(--ff-roboto-400);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.text-hover { transition: 300ms; }
+.text-hover:hover { opacity: .6; }
