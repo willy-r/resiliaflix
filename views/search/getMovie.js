@@ -23,7 +23,7 @@ function getMovie() {
             let movie = response
 
             let output = `
-        <div class="modal-header">
+        <div class="modal-header" id="md-header">
           <h3 class="modal-title" id="movieName">${movie.Title}</h3>           
         </div>
         
@@ -35,18 +35,18 @@ function getMovie() {
 
                 <div id="dataMovie">
                         
-                    <strong class="titleInfo">Title:</strong> ${movie.Title}</br>
-                    <strong class="titleInfo">Year:</strong> ${movie.Year}</br>
-                    <strong class="titleInfo">Actors:</strong> ${movie.Actors}</br>
-                    <strong class="titleInfo">Plot:</strong> ${movie.Plot}
+                    <strong class="titleInfo">Title:</strong> <spam class="moviesInfo">${movie.Title}</spam></br>
+                    <strong class="titleInfo">Year:</strong> <spam class="moviesInfo">${movie.Year}</spam></br>
+                    <strong class="titleInfo">Actors:</strong> <spam class="moviesInfo">${movie.Actors}</spam></br>
+                    <strong class="titleInfo">Plot:</strong> <spam class="moviesInfo">${movie.Plot}</spam>
 
                 </div>            
 
         </div>
           
-          <div class="modal-footer">
-            <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">TRAILER</a>
-            <button type="button" class="btn  btn-danger" data-bs-dismiss="modal">close</button>
+          <div class="modal-footer" id="md-footer">
+            <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn botao">TRAILER</a>
+            <button type="button" class="btn  btn-close" data-bs-dismiss="modal">close</button>
           </div>         
         `
 
