@@ -148,7 +148,7 @@ class FilmeView {
         <main class="modal-body rounded shadow-sm">
           <div class="container-fluid d-flex align-items-center p-3 h-100">
             <div class="bg-img trailer"></div>
-            <iframe class="w-100 rounded trailer-modal" id="trailer-filme" src="${this.model.trailer}" title="Trailer of the movie ${this.model.titulo}" frameborder="0" allowfullscreen>
+            <iframe class="w-100 rounded trailer-modal" id="trailer-filme" src="${this.model.trailer}" title="Trailer of the movie ${this.model.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
           </div>
         </main>
