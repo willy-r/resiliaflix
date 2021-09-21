@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Maicon-MK",
+      "name": "Maicon - MK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88468371?v=4",
+      "profile": "https://github.com/Maicon-MK",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "resiliaflix",
+  "projectOwner": "willy-r",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
