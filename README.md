@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/images/logo.svg" alt="ResiliaFlix logo">
+  <a href="https://willy-r.github.io/resiliaflix/">
+    <img src="assets/images/logo.svg" alt="ResiliaFlix logo">
+  </a>
 </p>
 
 # ResiliaFlix
