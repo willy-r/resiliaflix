@@ -1,0 +1,26 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "willy-r",
+      "name": "William Rodrigues",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47596121?v=4",
+      "profile": "https://willy-r.github.io/portfolio-feliz/",
+      "contributions": [
+        "ideas",
+        "review",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "resiliaflix",
+  "projectOwner": "willy-r",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
