@@ -7,7 +7,7 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText) {
-  let url = `http://www.omdbapi.com/?apikey=42d7f882&s=${searchText}`
+  let url = `https://www.omdbapi.com/?apikey=42d7f882&s=${searchText}`
 
   $.ajax({
     url: url,

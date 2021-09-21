@@ -9,7 +9,7 @@ class FilmeController {
   static mostraFilmesNoCarrosel(idsFilmes, carrosel) {
     for (let i = 0; i < idsFilmes.length; i++) {
       const idDoFilme = idsFilmes[i];
-      const url = constroiURLValida('http://www.omdbapi.com/', {
+      const url = constroiURLValida('https://www.omdbapi.com/', {
         apikey: '1ae9ffc1',
         i: idDoFilme,
       });
