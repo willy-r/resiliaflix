@@ -51,6 +51,11 @@
   margin-top: 30px;
 }
 
+#movies {
+  margin-top: 25px;
+  justify-content: space-around;
+}
+
 
 .moviesInfo {
   color: white;
@@ -91,6 +96,8 @@
 
 .movie-cards {
   margin-bottom: 15px;
+  margin-left: 15px;
+  background: var(--clr-preto-neutro);
 }
 
 .title {
@@ -105,26 +112,5 @@
     padding: 5px;
 }
 
-#movies img, #movie img{
-  height: 250px;    
-  
- }
-
- #movies .col-md-3 .well{
-   height: 390px;
-   
- }
-  
-@media(min-width: 1000px){
-    #movies .col-md-3 .well{
-      height: 390px;
-      
-    }
-  
-    #movies .col-md-3 img{
-      height: 300px ;
-      
-    }
-  }
 
  
