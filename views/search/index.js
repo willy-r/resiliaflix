@@ -32,11 +32,13 @@ function getMovies(searchText) {
       $.each(movies, (index, movie) => {
 
         output += `
-            <div class="col-md-3 movie-cards">
+            <div class="card movie-cards" style="width:280px">
               <div class="well text-center movieInfo">                
-                <img src="${movie.Poster}">                
-                <h5 class="title">${movie.Title}</h5>
+                <img class="card-img-top"  alt="Card image" src="${movie.Poster}">                
+                <div class="card-body">
+                <h5 class="card-title titleInfo ">${movie.Title}</h5>
                 <a onclick="movieSelected('${movie.imdbID}')" class="btn botao" href="#" data-bs-toggle="modal" data-bs-target="#modalResults">Movie Details</a>
+                </div>
               </div>
             </div>
             
