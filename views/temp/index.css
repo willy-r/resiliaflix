@@ -1,0 +1,58 @@
+:root {
+  --ff-roboto-400: Roboto, sans-serif;
+  --ff-rubik-400: Rubik, sans-serif;
+}
+
+#text {
+  width: 600px;
+  margin: auto;
+  margin-top: 25vh;
+  color: white;  
+}
+
+#welcome {
+  text-align: center;
+  margin-bottom: 35px;
+  font-family: var(--ff-roboto-400);
+  color: #ffd100;
+  font-size: x-large;
+  text-transform: uppercase;
+  font-weight: bolder
+}
+
+#textInfo {
+  font-family: var(--ff-rubik-400);
+  font-size: 14pt;
+  color: #ffd100;
+  text-align: justify;
+}
+
+#impact{ 
+  font-family: var(--ff-rubik-400);
+  font-size: 18pt;
+  color: #ffd100;
+  text-align: center;  
+}
+
+#redirect {
+  font-family: var(--ff-rubik-400);
+  font-size: 16pt;
+}
+
+@media(max-width: 700px) {
+  #text {
+    width: 300px;
+  }
+
+  #textInfo {
+    font-size: 11pt;
+  }
+
+  #impact {
+    font-size: 12pt;
+  }
+
+  #redirect {
+    font-size: 13pt;
+  }
+}
