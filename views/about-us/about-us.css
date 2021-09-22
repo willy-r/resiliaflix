@@ -1,0 +1,12 @@
+.nome-integrante{
+  color: white;
+  text-align: center;
+}
+
+.link:hover{
+  color: var(--clr-primaria) !important;
+}
+
+.link{
+  transition: 0.5s; 
+}
