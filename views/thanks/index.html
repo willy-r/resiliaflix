@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="#TODO">
-    <link rel="shortcut icon" href="#TODO" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
-    <title>ResiliaFlix | Search for a Movie</title>
+    <title>ResiliaFlix | Thanks for Registering!</title>
 
     <!-- Google Fonts - Roboto 400 e Rubik 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +23,6 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <!-- CSS da página vem depois daqui. -->
     <link rel="stylesheet" href="index.css">
 
     <!-- jQuery 3.6 -->
@@ -40,15 +38,16 @@
       crossorigin="anonymous">
     </script>
     
-    <!-- JS local (JS dá página vem depois daqui.). -->
+    <!-- JS local. -->
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/models/Usuario.js"></script>
+    <script src="../../assets/js/views/UsuarioView.js"></script>
+    <script src="../../assets/js/controllers/UsuarioController.js"></script>
     <script src="index.js" defer></script>
-    
-    
-    
   </head>
   <body class="d-flex flex-column h-100">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar bd-bottom-r10">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-preto-neutro bd-bottom-r10">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="../../">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
@@ -60,20 +59,26 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" aria-current="page" href="../../">Home</a>
+                <a class="nav-link text-uppercase" aria-current="page" href="../../">
+                  <span class="bi bi-house"></span> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
+                <a class="nav-link text-uppercase" href="../../#movies">
+                  <span class="bi bi-film"></span> Movies
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../about-us/">About us</a>
+                <a class="nav-link text-uppercase" href="../about-us/">
+                  <span class="bi bi-people"></span> About us
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="auth">
                 <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
                   <span class="bi bi-person-circle"></span>
                 </a>
@@ -82,36 +87,48 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../login/">Sign in</a>
+                    <a class="dropdown-item" href="../login/">
+                      Sign in <span class="bi bi-person-fill"></span>
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../register/">Sign up</a>
+                    <a class="dropdown-item" href="../register/">
+                      Sign up <span class="bi bi-person-plus-fill"></span>
+                    </a>
                   </li>
                 </ul>
               </li>
-            </ul> <!-- .nav-navbar -->
+              <li class="nav-item" id="auth-logout" title="Click to Sign Out">
+                <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
+              </li>
+            </ul>
           </div>
-        </div> <!-- .container -->
+        </div>
       </nav>
     </header>
 
-    <!-- O código dá página que será desenvolvida vem aqui. -->
-    <div id="text" class="justify-content-center">
+    <main class="container h-100 d-flex justify-content-center align-items-center flex-column abaixo-header" id="text">
+      <div class="p-3 my-5 text-light position-relative box na-frente">
+        <div class="bg-img bord"></div>
+        <article class="container-fluid py-5">
+          <h1 class="text-uppercase fw-bold text-center fs-3 ff-roboto clr-primaria">
+            Welcome to <a class="logo mx-1" href="../../"><span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span></a>!
+          </h1>
+          <p class="col-md-12 fs-5">
+            Thanks for registering on our site, you now have access to many movies for free, anywhere, with any device. You can also
+            subscribe to the <strong class="fw-bold text-uppercase clr-primaria ">PRO</strong> version and have access to much more...
+            <br>
+            <strong class="fw-bold clr-primaria">ResiliaFlix</strong>, the best way to you watch movies!
+          </p>
+          <p class="mb-0 text-center">
+            You will be redirected, already loged in, in <span class="fw-bold clr-primaria" id="timer"></span> seconds...
+          </p>
+        </article>
+      </div>
+    </main>
 
-        <p id="welcome">Welcome to    <a class="navbar-brand logo" href="/">
-          <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
-        </a></p>
-
-        <p id="textInfo">Thanks for registering on our site, you now have access to many movies for free, anywhere, with any device. You can also subscribe to the PRO version and have access to much more...</p>
-        
-        <p id="impact"><span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
-           your way to watch!</p>
-        
-          <P id="redirect">You will be redirected in <span id="display"></span> seconds</P>
-          
-    </div>
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
-    <footer class="mt-auto bd-top-r10 bgc-footer">
+    <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
         <p class="text-center mb-0">
           <a class="logo logo-sm" href="../../">
