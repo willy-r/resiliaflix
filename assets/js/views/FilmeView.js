@@ -49,7 +49,7 @@ class FilmeView {
     $(cartao).html(`
       <img
         class="rounded img-cartao"
-        src="${this.model.img}" alt="Poster do filme ${this.model.titulo}"
+        src="${this.model.img}" alt="Poster of the movie ${this.model.titulo}"
         data-tooltip-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria"
         data-bs-toggle="modal" data-bs-target="#info-filme-modal"
         title="${this.model.titulo}"
@@ -86,7 +86,7 @@ class FilmeView {
             <div class="bg-img"></div>
             <div class="row g-0">
               <div class="col-md-4 align-self-center d-flex justify-content-center">
-                <img class="img-fluid rounded shadow img-modal" src="${this.model.img}" alt="Poster do filme ${this.model.titulo}">
+                <img class="img-fluid rounded shadow img-modal" src="${this.model.img}" alt="Poster of the movie ${this.model.titulo}">
               </div>
               <div class="col-md-8">
                 <div class="card-body">

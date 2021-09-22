@@ -65,6 +65,10 @@ class Filme {
     this._trailer = novoTrailer;
   }
 
+  set id(novoId) {
+    this._id = novoId;
+  }
+
   /**
    * Formata a duração do filme para o formato '0h 00min.'
    * 

@@ -1,9 +1,6 @@
-
-
-
 setTimeout(function() {
-  window.location.href = "../../index.html"
-}, 10000)
+  location.href = "../../index.html"
+}, 5000)
 
 
 
@@ -26,7 +23,7 @@ function displayTimer(duration, display) {
 }
 
 window.onload = function() {
-  let duration = 10
+  let duration = 5
   let display = document.querySelector('#display')
 
   displayTimer(duration, display)

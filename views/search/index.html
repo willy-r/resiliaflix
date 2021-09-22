@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="#TODO">
-    <link rel="shortcut icon" href="#TODO" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
     <title>ResiliaFlix | Search for a Movie</title>
 
@@ -24,7 +23,6 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <!-- CSS da página vem depois daqui. -->
     <link rel="stylesheet" href="index.css">
 
     <!-- jQuery 3.6 -->
@@ -40,11 +38,13 @@
       crossorigin="anonymous">
     </script>
     
-    <!-- JS local (JS dá página vem depois daqui.). -->
+    <!-- JS local. -->
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/models/Usuario.js"></script>
+    <script src="../../assets/js/views/UsuarioView.js"></script>
+    <script src="../../assets/js/controllers/UsuarioController.js"></script>
+    <script src="getMovie.js" defer></script>
     <script src="index.js" defer></script>
-    <script src="getMovie.js" defer> </script>
-    
-    
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -60,20 +60,26 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" aria-current="page" href="../../">Home</a>
+                <a class="nav-link text-uppercase" aria-current="page" href="../../">
+                  <span class="bi bi-house"></span> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
+                <a class="nav-link text-uppercase" href="../../#movies">
+                  <span class="bi bi-film"></span> Movies
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../about-us/">About us</a>
+                <a class="nav-link text-uppercase" href="../about-us/">
+                  <span class="bi bi-people"></span> About us
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="auth">
                 <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
                   <span class="bi bi-person-circle"></span>
                 </a>
@@ -82,29 +88,34 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../login/">Sign in</a>
+                    <a class="dropdown-item" href="../login/">
+                      Sign in <span class="bi bi-person-fill"></span>
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../register/">Sign up</a>
+                    <a class="dropdown-item" href="../register/">
+                      Sign up <span class="bi bi-person-plus-fill"></span>
+                    </a>
                   </li>
                 </ul>
               </li>
-            </ul> <!-- .nav-navbar -->
+              <li class="nav-item" id="auth-logout" title="Click to Sign Out">
+                <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
+              </li>
+            </ul>
           </div>
-        </div> <!-- .container -->
+        </div>
       </nav>
     </header>
 
-    <!-- O código dá página que será desenvolvida vem aqui. -->
     <div id="contSearch">
-      <div id="searchCamp" class="d-flex justify-content-center">
-        <input type="text" id="search" class="input justify-content-center form-control" placeholder="Find your movie!"> </div>
+      <div class="d-flex justify-content-center" id="searchCamp">
+        <input class="input justify-content-center form-control" type="text" id="search" placeholder="Find your movie!"> </div>
         <button id="btn-search" class="btn botao d-flex justify-content-center"">Search</button>
       </div>
     
       <div class="container">
         <div id="movies" class="row"></div>
-        <p id="erro"></p>
       </div>
     
       <div class="modal fade" id="modalResults" tabindex="-1" role="dialog">
@@ -114,6 +125,7 @@
         </div>
       </div>
     </div>
+    
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
     <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
