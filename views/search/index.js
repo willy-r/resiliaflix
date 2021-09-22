@@ -4,6 +4,10 @@ $('#btn-search').click(() => {
   getMovies(searchText);
 });
 
+// Usuários.
+UsuarioController.alteraPaginaQuandoDeslogaUsuario();
+UsuarioController.alteraPaginaUsuarioLogado();
+
 /**
  * Faz uma requisição e mostra todos os filmes encontrados,
  * se não mostra uma mensagem de erro.
@@ -50,7 +54,3 @@ function getMovies(searchText) {
     }
   }})
 }
-
-// Usuários.
-UsuarioController.alteraPaginaQuandoDeslogaUsuario();
-UsuarioController.alteraPaginaUsuarioLogado();

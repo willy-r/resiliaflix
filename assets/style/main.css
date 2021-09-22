@@ -182,6 +182,12 @@ body {
   width: 30%;
 }
 
+.box {
+  background-color: var(--clr-preto-neutro);
+  box-shadow: 0 0 .4375rem var(--clr-preto-escuro);
+  border-radius: var(--radius-padrao);
+}
+
 
 /*
  * Alterações no Bootstrap (afeta apenas o header).
