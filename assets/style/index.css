@@ -31,13 +31,13 @@
 }
 
 .img-carrosel {
-  height: 35rem;
+  height: 100vh;
   object-fit: cover;
-  object-position: center -25%;
+  object-position: center top;
 }
 
 @media (max-width: 62em) {
-  .img-carrosel { height: 30rem; }
+  .img-carrosel { height: 85vh; }
 }
 
 .move-direita > span:nth-child(2) {
