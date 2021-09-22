@@ -201,6 +201,7 @@ body {
 .ff-rubik { font-family: var(--ff-rubik-400); }
 
 .clr-primaria { color: var(--clr-primaria) !important; }
+.clr-secundaria { color: var(--clr-secundaria) !important; }
 
 .bgc-preto-neutro { background-color: var(--clr-preto-neutro); }
 .bgc-preto-escuro { background-color: var(--clr-preto-escuro); }
