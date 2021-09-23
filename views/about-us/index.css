@@ -1,0 +1,7 @@
+.link:hover{ color: var(--clr-primaria) !important; }
+
+.link{ transition: 400ms; }
+
+.card-hover { transition: 350ms cubic-bezier(.17,-1.5,.65,2.48); }
+
+.card-hover:hover { transform: scale(1.08); }
