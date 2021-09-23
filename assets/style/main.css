@@ -189,7 +189,7 @@ body {
   border-radius: var(--radius-padrao);
 }
 
-/* Alguns estilos que são aplicados nos modais da página. */
+/* Alguns estilos que são aplicados nos modais das páginas. */
 .move-esquerda > span { transition: 300ms cubic-bezier(.34,-1.24,.66,2.2); }
 .move-esquerda:hover > span,
 .move-esquerda:focus > span { padding-left: .3125rem; }
@@ -216,6 +216,16 @@ body {
 @media (max-width: 26.25em) {
   .trailer-modal { min-height: 50vh; }
 }
+
+/* Alguns estilos que são usados nos formulários das páginas. */
+.titulo-form {
+  font-family: var(--ff-roboto-400);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.text-hover { transition: 300ms; }
+.text-hover:hover { opacity: .6; }
 
 
 /*

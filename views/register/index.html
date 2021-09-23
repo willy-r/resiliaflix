@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="#TODO">
-    <link rel="shortcut icon" href="#TODO" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
     <title>ResiliaFlix | Sign Up</title>
 
@@ -24,7 +23,6 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
-    <!-- CSS da página vem depois daqui. -->
 
     <!-- jQuery 3.6 -->
     <script
@@ -39,8 +37,12 @@
       crossorigin="anonymous">
     </script>
     
-    <!-- JS local (JS dá página vem depois daqui.). -->
+    <!-- JS local. -->
     <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/models/Usuario.js"></script>
+    <script src="../../assets/js/views/UsuarioView.js"></script>
+    <script src="../../assets/js/controllers/UsuarioController.js"></script>
+    <script src="index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -56,20 +58,26 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" aria-current="page" href="../../">Home</a>
+                <a class="nav-link text-uppercase" aria-current="page" href="../../">
+                  <span class="bi bi-house"></span> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
+                <a class="nav-link text-uppercase" href="../../#movies">
+                  <span class="bi bi-film"></span> Movies
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../about-us/">About us</a>
+                <a class="nav-link text-uppercase" href="../about-us/">
+                  <span class="bi bi-people"></span> About us
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="auth">
                 <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
                   <span class="bi bi-person-circle"></span>
                 </a>
@@ -78,12 +86,19 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../login/">Sign in</a>
+                    <a class="dropdown-item" href="../login/">
+                      Sign in <span class="bi bi-person-fill"></span>
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item active" href="../register/">Sign up</a>
+                    <a class="dropdown-item active" href="./">
+                      Sign up <span class="bi bi-person-plus-fill"></span>
+                    </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item" id="auth-logout" title="Click to Sign Out">
+                <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
               </li>
             </ul>
           </div>
@@ -91,7 +106,104 @@
       </nav>
     </header>
 
-    <!-- O código dá página que será desenvolvida vem aqui. -->
+    <main class="container px-md-5 d-flex justify-content-center abaixo-header">
+      <form class="row g-3 p-5 my-5 text-light box" id="form">
+        <legend class="h1 clr-primaria titulo-form">Create an account</legend>
+
+        <fieldset class="col-md-6">
+          <label class="form-label" for="nome">Name</label>
+          <input class="form-control" id="nome" type="text" placeholder="Your Name" required>
+        </fieldset>
+        
+        <fieldset class="col-md-6">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" id="email" type="email" placeholder="example@domain.com" aria-describedby="email-help" required>
+          <p class="form-text mb-0" id="email-help">
+            We'll send an email to confirm your account.
+          </p>
+        </fieldset>
+        
+        <fieldset class="col-md-6">
+          <label class="form-label" for="senha">Password</label>
+          <input class="form-control" id="senha" type="password" aria-describedby="password-help" required>
+          <p class="form-text mb-0" id="password-help">
+            Minimum six characters, at least one letter and one number.
+          </p>
+          <p class="invalid-feedback" id="erro-senha">
+            You must provide a valid password.
+          </p>
+        </fieldset>
+
+        <fieldset class="col-md-6">
+          <label class="form-label" for="confirma-senha">Confirm password</label>
+          <input class="form-control" id="confirma-senha" type="password" aria-describedby="password-confirm-help" required>
+          <p class="form-text mb-0" id="password-confirm-help">
+            Repeat the password to confirm.
+          </p>
+          <p class="invalid-feedback" id="erro-confirma-senha">
+            The password must be the same.
+          </p>
+        </fieldset>
+
+        <fieldset class="col-12">
+          <label class="form-label" for="rg">ID</label>
+          <input class="form-control" id="rg" type="text" placeholder="Identification number" required>
+        </fieldset>
+
+        <fieldset class="col-md-3">
+          <label class="form-label" for="cep">Zip Code</label>
+          <input class="form-control" id="cep" type="text" maxlength="9" required>
+          <p class="invalid-feedback" id="erro-cep">
+            Please provide a valid zip code.
+          </p>
+        </fieldset>
+
+        <fieldset class="col-md-3">
+          <label class="form-label" for="estado">State</label>
+          <input class="form-control" id="estado" type="text">
+        </fieldset>
+
+        <fieldset class="col-md-3">
+          <label class="form-label" for="cidade">City</label>
+          <input class="form-control" id="cidade" type="text">
+        </fieldset>
+
+        <fieldset class="col-md-3">
+          <label class="form-label" for="bairro">District</label>
+          <input class="form-control" id="bairro" type="text">
+        </fieldset>
+
+        <fieldset class="col-md-2">
+          <label class="form-label" for="numero">Number</label>
+          <input class="form-control" id="numero" min="1" type="number">
+        </fieldset>
+
+        <fieldset class="col-md-5">
+          <label class="form-label" for="rua">Address</label>
+          <input class="form-control" id="rua" type="text">
+        </fieldset>
+
+        <fieldset class="col-md-5">
+          <label class="form-label" for="complemento">Address 2</label>
+          <input class="form-control" id="complemento" type="text" placeholder="Apartment, studio, or floor">
+        </fieldset>
+
+        <div class="col-12">
+          <fieldset class="form-check">
+            <input class="form-check-input" id="termos" type="checkbox" required>
+            <label class="form-check-label" for="termos">
+              Agree to terms and conditions
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="col-12 mt-4">
+          <button class="btn px-5 botao" type="submit">
+            Sign Up <span class="bi bi-person-plus"></span>
+          </button>
+        </div>
+      </form>
+    </main>
 
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
     <footer class="mt-auto bd-top-r10 bgc-preto-neutro">

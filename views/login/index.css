@@ -1,8 +1,0 @@
-.titulo-form {
-  font-family: var(--ff-roboto-400);
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.text-hover { transition: 300ms; }
-.text-hover:hover { opacity: .6; }
