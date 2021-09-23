@@ -23,3 +23,6 @@ FilmeController.mostraFilmesNoCarrosel(filmesRecomendados, $('#filmes-recomendad
 // Usuários.
 UsuarioController.alteraPaginaQuandoDeslogaUsuario();
 UsuarioController.alteraPaginaUsuarioLogado();
+
+// Interações com a página.
+trataCliqueBotaoPrecos();

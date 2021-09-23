@@ -42,14 +42,14 @@ class FilmeController {
    * @param {FilmeView} filmeView
    */
   static _trataCliqueNoCartao(cartaoImg, filmeView) {
-    cartaoImg.click((event) => {
+    cartaoImg.click(() => {
       if (Usuario.estaLogado()) {
         // Com a view atual, toda a informação do filme clicado também estará disponível
         // é só passar para o modal nesse caso e depois tratar o clique do botão que mostrará
         // o trailer, nesse caso será necessário fazer uma requisição para buscar o trailer.
-        const modal = $('#info-filme-interface')[0],
-              modalTrailer = $('#trailer-filme-modal')[0],
-              interfaceModalTrailer = $('#trailer-filme-interface')[0];
+        const modal = $('#info-filme-interface'),
+              modalTrailer = $('#trailer-filme-modal'),
+              interfaceModalTrailer = $('#trailer-filme-interface');
 
         filmeView.insereConteudoNoModal(modal);
 
@@ -61,8 +61,6 @@ class FilmeController {
             () => filmeView.mostraErroTrailer(interfaceModalTrailer),
           );
       } else {
-        // Impede que o modal abra.
-        event.stopPropagation();
         redirecionaParaPagina('views/login/');
       }
     });
