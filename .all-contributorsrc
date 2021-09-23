@@ -45,6 +45,16 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "DevSkull",
+      "name": "DevSkull",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88167078?v=4",
+      "profile": "https://github.com/DevSkull",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
