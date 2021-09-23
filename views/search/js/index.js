@@ -26,6 +26,10 @@ function getMovies(searchText) {
     url: url,
     success: (dados) => {
       if(dados.Response == "False") {
+        // Reseta a pesquisa e texto procurado de antes.
+        $('#movies').html('');
+        $('#textSearched').hide();
+
         $('.invalid-feedback').first().show();
         setTimeout(() => $('.invalid-feedback').first().hide(), 3500);
       } else {
@@ -36,9 +40,9 @@ function getMovies(searchText) {
         
         dados.Search.forEach((movie) => {
           const card = document.createElement('article');
-          card.className = 'card text-light p-3 box';
+          card.className = 'card text-light p-3 box movie-info';
           card.innerHTML = `             
-            <img class="card-img-top card-img" src="${movie.Poster === 'N/A' ? '../../assets/images/movie-not-found.png' : movie.Poster}" alt="Poster of the movie ${movie.Title}"  data-bs-toggle="modal" data-bs-target="#movieModal" title="${movie.Title}">              
+            <img class="card-img-top card-img" src="${movie.Poster === 'N/A' ? '../../assets/images/movie-not-found.png' : movie.Poster}" alt="Poster of the movie ${movie.Title}"  data-bs-toggle="modal" data-bs-target="#info-filme-modal" title="${movie.Title}">              
             <main class="card-body px-0 py-2">
               <h3 class="card-title m-0 text-truncate fs-5 fs-md-6 ff-roboto" title="${movie.Title}">
                 ${movie.Title}
@@ -48,14 +52,14 @@ function getMovies(searchText) {
               <p class="mb-2 text-center">
                 <span class="bi bi-calendar-event me-1 clr-primaria"></span> ${movie.Year}
               </p>
-              <button class="btn botao" data-bs-toggle="modal" data-bs-target="#movieModal">
+              <button class="btn botao" data-bs-toggle="modal" data-bs-target="#info-filme-modal">
                 Movie details <span class="bi bi-eye"></span>
               </button>
             </footer>
           `;
 
           // Coloca evento de clique na imagem e no botão para verificar se está logado.
-          handleClickToOpenModal($(card).find('[data-bs-target="#movieModal"]'), movie.imdbID);
+          handleClickToOpenModal($(card).find('[data-bs-target="#info-filme-modal"]'), movie.imdbID);
 
           const cardWrapper = document.createElement('div');
           cardWrapper.className = 'col';

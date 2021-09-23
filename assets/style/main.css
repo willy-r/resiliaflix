@@ -189,13 +189,50 @@ body {
   border-radius: var(--radius-padrao);
 }
 
+/* Alguns estilos que são aplicados nos modais da página. */
+.move-esquerda > span { transition: 300ms cubic-bezier(.34,-1.24,.66,2.2); }
+.move-esquerda:hover > span,
+.move-esquerda:focus > span { padding-left: .3125rem; }
+
+.cartao-modal {
+  position: relative;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.img-modal {
+  height: 22rem;
+  object-fit: cover;
+  transition: 300ms cubic-bezier(.34,-1.24,.66,2.2);
+}
+.img-modal:hover { transform: scale(1.05); }
+
+.trailer-modal {
+  position: relative;
+  z-index: 1;
+  min-height: 55vh;
+}
+
+@media (max-width: 26.25em) {
+  .trailer-modal { min-height: 50vh; }
+}
+
 
 /*
- * Alterações no Bootstrap (afeta apenas o header).
+ * Alterações no Bootstrap que afeta todas as páginas.
  */
 
 .dropdown-item:active,
 .dropdown-item.active { background-color: var(--clr-secundaria) !important; }
+
+ @media (min-width: 48em) and (max-width: 62em)  {
+  .modal-dialog { max-width: 50rem; }
+}
+
+.modal-body {
+  padding: 0;
+  border: 1px solid rgba(222, 226, 230, .4);
+}
 
 
 /*
