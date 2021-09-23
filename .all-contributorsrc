@@ -1,0 +1,67 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 150,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "willy-r",
+      "name": "William Rodrigues",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47596121?v=4",
+      "profile": "https://willy-r.github.io/portfolio-feliz/",
+      "contributions": [
+        "ideas",
+        "review",
+        "code"
+      ]
+    },
+    {
+      "login": "jeanramalho",
+      "name": "Jean Ramalho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72111010?v=4",
+      "profile": "https://github.com/jeanramalho",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "Maicon-MK",
+      "name": "Maicon - MK",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88468371?v=4",
+      "profile": "https://github.com/Maicon-MK",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "leticiabedoni",
+      "name": "Letícia Bedoni de Azevedo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88463815?v=4",
+      "profile": "https://www.linkedin.com/in/leticia-souza04/",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "DevSkull",
+      "name": "DevSkull",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88167078?v=4",
+      "profile": "https://github.com/DevSkull",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "resiliaflix",
+  "projectOwner": "willy-r",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributorsSortAlphabetically": true
+}

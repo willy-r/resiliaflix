@@ -1,2 +1,72 @@
-/* CSS da página home. */
- 
+.img-cartao {
+  height: 18.75rem;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.img-cartao:hover { filter: opacity(.7); }
+
+.cartao-modal {
+  position: relative;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.img-modal {
+  height: 22rem;
+  object-fit: cover;
+  transition: 300ms cubic-bezier(.34,-1.24,.66,2.2);
+}
+.img-modal:hover { transform: scale(1.05); }
+
+.trailer-modal {
+  position: relative;
+  z-index: 1;
+  min-height: 55vh;
+}
+
+@media (max-width: 26.25em) {
+  .trailer-modal { min-height: 50vh; }
+}
+
+.img-carrosel {
+  height: 35rem;
+  object-fit: cover;
+  object-position: center -25%;
+}
+
+@media (max-width: 62em) {
+  .img-carrosel { height: 30rem; }
+}
+
+.move-direita > span:nth-child(2) {
+  cursor: default;
+  transition: 250ms;
+}
+.move-direita:hover > span:nth-child(2) { padding-left: .625rem; }
+
+.move-esquerda > span { transition: 300ms cubic-bezier(.34,-1.24,.66,2.2); }
+.move-esquerda:hover > span,
+.move-esquerda:focus > span { padding-left: .3125rem; }
+
+.ts-carrossel { text-shadow: 0 .3125em 0 var(--clr-preto-escuro); }
+.ts-txt-carrossel { text-shadow: 0 .3em .321em var(--clr-preto-escuro); }
+
+.efeito-link { transition: 250ms; }
+.efeito-link:hover,
+.efeito-link:focus { opacity: .7; }
+
+
+/*
+ * Alterações no Bootstrap da página home.
+ */
+
+@media (min-width: 48em) and (max-width: 62em)  {
+  .modal-dialog { max-width: 50rem; }
+}
+
+.modal-body {
+  padding: 0;
+  border: 1px solid rgba(222, 226, 230, .4);
+}

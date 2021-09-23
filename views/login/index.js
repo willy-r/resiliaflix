@@ -1,5 +1,10 @@
-$('#form').submit(function (event) {
-    event.preventDefault()
-    localStorage.setItem('estaLogado', 'true')
-    $('#form')[0].reset()
-})
+$('#form').submit((event) => {
+  event.preventDefault();
+  
+  Usuario.logaUsuario();
+  redirecionaParaPagina('../../');
+});
+
+// Usuários.
+UsuarioController.alteraPaginaQuandoDeslogaUsuario();
+UsuarioController.alteraPaginaUsuarioLogado();

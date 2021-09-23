@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="#TODO">
-    <link rel="shortcut icon" href="#TODO" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
     <title>ResiliaFlix | About Us</title>
 
@@ -24,8 +23,6 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
-
-    <!-- CSS da página vem depois daqui. -->
     <link rel="stylesheet" href="about-us.css">
 
     <!-- jQuery 3.6 -->
@@ -34,7 +31,6 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous">
     </script>
-
     <!-- Bootstrap JS 5.1 -->
     <script 
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
@@ -42,11 +38,16 @@
       crossorigin="anonymous">
     </script>
     
-    <!-- JS local (JS dá página vem depois daqui.). -->
+    <!-- JS local. -->
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/models/Usuario.js"></script>
+    <script src="../../assets/js/views/UsuarioView.js"></script>
+    <script src="../../assets/js/controllers/UsuarioController.js"></script>
+    <script src="index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar bd-bottom-r10">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-preto-neutro bd-bottom-r10">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="../../">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
@@ -58,20 +59,26 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
             <ul class="navbar-nav align-items-md-center mb-2 mb-lg-0 ff-roboto">
               <li class="nav-item">
-                <a class="nav-link text-uppercase" aria-current="page" href="../../">Home</a>
+                <a class="nav-link text-uppercase" aria-current="page" href="../../">
+                  <span class="bi bi-house"></span> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase" href="../../#movies">Movies</a>
+                <a class="nav-link text-uppercase" href="../../#movies">
+                  <span class="bi bi-film"></span> Movies
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-uppercase" href="../about-us/">About us</a>
+                <a class="nav-link active text-uppercase" href="../about-us/">
+                  <span class="bi bi-people"></span> About us
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="auth">
                 <a class="nav-link dropdown-toggle fs-3 tira-ml clr-primaria" href="#" id="navbar-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Authentication">
                   <span class="bi bi-person-circle"></span>
                 </a>
@@ -80,12 +87,19 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../login/">Sign in</a>
+                    <a class="dropdown-item" href="../login/">
+                      Sign in <span class="bi bi-person-fill"></span>
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="../register/">Sign up</a>
+                    <a class="dropdown-item" href="../register/">
+                      Sign up <span class="bi bi-person-plus-fill"></span>
+                    </a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item" id="auth-logout" title="Click to Sign Out">
+                <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
               </li>
             </ul>
           </div>
@@ -95,13 +109,12 @@
 
     <!-- O código dá página que será desenvolvida vem aqui. -->
     
-  <div class="container h-100 d-flex justify-content-center align-items-center mt-5">
+    <div class="container h-100 d-flex justify-content-center align-items-center mt-5">
       <div class="row justify-content-center">
        
       <div class="col-2 grid p-3 rounded">
           <img src="us/william-rodrigues.png" class="img-fluid mb-2 rounded-circle" alt="">
-          <h5 class="nome-integrante">William Rodrigues</h5>
-          
+          <h5 class="nome-integrante">William Rodrigues</h5>       
           <div class="text-center">
             <a class="icone text-decoration-none fs-2 clr-secundaria link" href="https://github.com/willy-r" target="_blank">
               <i class="bi bi-github"></i>
@@ -115,12 +128,11 @@
               <i class="bi bi-instagram"></i>
             </a>
           </div>
-      </div>
+        </div>
 
         <div class="col-2 grid p-3 rounded">
           <img src="us/leticia-bedoni.png" class="img-fluid mb-2 rounded-circle" alt="">
           <h5 class="nome-integrante">Letícia Bedoni</h5>
-
           <div class="text-center">
             <a class="icone text-decoration-none fs-2 clr-secundaria link" href="https://github.com/leticiabedoni" target="_blank">
               <i class="bi bi-github"></i>
@@ -138,8 +150,7 @@
 
         <div class="col-2 grid p-3 rounded">
           <img src="us/jean-ramalho.png" class="img-fluid mb-2 rounded-circle" alt="">
-          <h5 class="nome-integrante">Jean Ramalho</h5>
-          
+          <h5 class="nome-integrante">Jean Ramalho</h5> 
           <div class="text-center">
             <a class="icone text-decoration-none fs-2 clr-secundaria link" href="https://github.com/jeanramalho" target="_blank">
               <i class="bi bi-github"></i>
@@ -196,10 +207,9 @@
         </div>
       </div>
     </div>
-  
 
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
-    <footer class="mt-auto bd-top-r10 bgc-footer">
+    <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
         <p class="text-center mb-0">
           <a class="logo logo-sm" href="../../">

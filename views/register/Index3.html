@@ -25,6 +25,7 @@
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
     <!-- CSS da página vem depois daqui. -->
+    <link rel="stylesheet" href="index3.css">
 
     <!-- jQuery 3.6 -->
     <script
@@ -40,11 +41,13 @@
     </script>
     
     <!-- JS local (JS dá página vem depois daqui.). -->
-    <script src="../../assets/js/utils.js"></script>
+
+    <script src="index3.js"></script>
+
   </head>
   <body class="d-flex flex-column h-100">
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-preto-neutro bd-bottom-r10">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bgc-navbar bd-bottom-r10">
         <div class="container-fluid">
           <a class="navbar-brand logo" href="../../">
             <span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span>
@@ -65,7 +68,7 @@
                 <a class="nav-link text-uppercase" href="../about-us/">About us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-3 clr-primaria" href="../search/" title="Search for movies">
+                <a class="nav-link active fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
@@ -81,20 +84,76 @@
                     <a class="dropdown-item" href="../login/">Sign in</a>
                   </li>
                   <li>
-                    <a class="dropdown-item active" href="../register/">Sign up</a>
+                    <a class="dropdown-item" href="../register/">Sign up</a>
                   </li>
                 </ul>
               </li>
-            </ul>
+            </ul> <!-- .nav-navbar -->
           </div>
-        </div>
+        </div> <!-- .container -->
       </nav>
     </header>
 
     <!-- O código dá página que será desenvolvida vem aqui. -->
+  <div align= center>
+    <h1>Registration</h1>
+    <form class="row g-3"></form>
+    <div class="col-md-6">
+      <label for="inputName4" class="form-label">Name</label>
+      <input type="text" class="form-control" id="inputName" placeholder="Your Name"></br>
+    </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="email@email.com"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputName4" class="form-label">RG</label>
+        <input type="text" id="rg" class="form-control" onKeyUp="nu(this)" placeholder="RG"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="1234"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm_password" placeholder="1234"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputZip4" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip" placeholder="Zip Code"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputAddress4" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputNumber4" class="form-label">Number</label>
+        <input type="text" class="form-control" id="inputNumber" placeholder="House Number"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputDistrict" class="form-label">District</label>
+        <input type="text" class="form-control" id="inputDistrict" placeholder="District"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="City"></br>
+      </div>
+      <div class="col-md-6">
+        <label for="inputState" class="form-label">State</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="State"></br>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" value="Submit">Sign in</button>
+      </div></br>
+    </form>
+  </div>
+  <!-- <div align=center id=camada></div>
+<div align=center>
+<input type="text" id="rg" onKeyUp="nu(this)"> <input type=button value='Validar RG' onClick="if(document.getElementById('rg').value != ''){ValRG(document.getElementById('rg').value)}else{alert('RG em branco')}"></div> -->
+</body></html>      
 
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
-    <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
+    <footer class="mt-auto bd-top-r10 bgc-footer">
       <div class="p-3 text-light">
         <p class="text-center mb-0">
           <a class="logo logo-sm" href="../../">

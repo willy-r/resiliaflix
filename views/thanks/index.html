@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
-    <title>ResiliaFlix | Sign In</title>
+    <title>ResiliaFlix | Thanks for Registering!</title>
 
     <!-- Google Fonts - Roboto 400 e Rubik 400 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +74,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-3 clr-primaria" href="../search/" title="Search for movies">
+                <a class="nav-link active fs-3 clr-primaria" href="../search/" title="Search for movies">
                   <span class="bi bi-search"></span>
                 </a>
               </li>
@@ -87,7 +87,7 @@
                     <h6 class="dropdown-header">Authentication</h6>
                   </li>
                   <li>
-                    <a class="dropdown-item active" href="../login/">
+                    <a class="dropdown-item" href="../login/">
                       Sign in <span class="bi bi-person-fill"></span>
                     </a>
                   </li>
@@ -107,33 +107,26 @@
       </nav>
     </header>
 
-    <main class="container d-flex align-items-center justify-content-center abaixo-header">
-      <form class="p-5 text-light my-5 box" id="form">
-        <legend class="h1 clr-primaria titulo-form">Sign in</legend>
-        
-        <fieldset class="mb-3">
-          <label class="form-label" for="email">Email address</label>
-          <input class="form-control" id="email" type="email" placeholder="example@domain.com" aria-describedby="email-help" required>
-          <p class="form-text mb-0" id="email-help">
-            We'll never share your email with anyone else.
+    <main class="container h-100 d-flex justify-content-center align-items-center flex-column abaixo-header" id="text">
+      <div class="p-3 my-5 text-light position-relative box na-frente">
+        <div class="bg-img bord"></div>
+        <article class="container-fluid py-5">
+          <h1 class="text-uppercase fw-bold text-center fs-3 ff-roboto clr-primaria">
+            Welcome to <a class="logo mx-1" href="../../"><span class="bi bi-film"></span> Resilia<span class="highlight">Flix</span></a>!
+          </h1>
+          <p class="col-md-12 fs-5">
+            Thanks for registering on our site, you now have access to many movies for free, anywhere, with any device. You can also
+            subscribe to the <strong class="fw-bold text-uppercase clr-primaria ">PRO</strong> version and have access to much more...
+            <br>
+            <strong class="fw-bold clr-primaria">ResiliaFlix</strong>, the best way to you watch movies!
           </p>
-        </fieldset>
-        <fieldset class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input class="form-control" id="password" type="password" required>
-        </fieldset>
-        <div class="mb-4">
-          <a href="../password-reset/" class="text-decoration-none clr-primaria text-hover" title="Click here to reset password">
-            Forgot password?
-          </a>
-        </div>
-
-        <button class="btn mx-auto botao" type="submit">
-          Submit <span class="bi bi-box-arrow-in-right"></span>
-        </button>
-      </form>
+          <p class="mb-0 text-center">
+            You will be redirected, already loged in, in <span class="fw-bold clr-primaria" id="timer"></span> seconds...
+          </p>
+        </article>
+      </div>
     </main>
-      
+
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
     <footer class="mt-auto bd-top-r10 bgc-preto-neutro">
       <div class="p-3 text-light">
