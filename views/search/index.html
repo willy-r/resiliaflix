@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In ResiliaFlix, you can search for any movie that you want with our super seacher engine, choose a movie name and you're done! Enjoy!">
     <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
     <title>ResiliaFlix | Search for a Movie</title>
@@ -43,8 +44,8 @@
     <script src="../../assets/js/models/Usuario.js"></script>
     <script src="../../assets/js/views/UsuarioView.js"></script>
     <script src="../../assets/js/controllers/UsuarioController.js"></script>
-    <script src="getMovie.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/index.js" defer></script>
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -108,23 +109,50 @@
       </nav>
     </header>
 
-    <div id="contSearch">
-      <div class="d-flex justify-content-center" id="searchCamp">
-        <input class="input justify-content-center form-control" type="text" id="search" placeholder="Find your movie!"> </div>
-        <button id="btn-search" class="btn botao d-flex justify-content-center"">Search</button>
-      </div>
-    
-      <div class="container">
-        <div id="movies" class="row"></div>
-      </div>
-    
-      <div class="modal fade" id="modalResults" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content" id="info">    
-          </div>
-        </div>
+    <!-- Modal para mostrar as informações do filme. -->
+    <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="info-filme-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
       </div>
     </div>
+    <!-- Modal para mostrar o trailer do filme. -->
+    <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailer-filme-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered" id="trailer-filme-interface">
+      </div>
+    </div>
+
+    <main class="container-fluid abaixo-header">
+      <div class="bg-img principal search"></div>
+      <form class="container d-flex align-items-center flex-column p-3 my-5 box" id="form">
+        <legend class="h1 mb-3 fw-bold clr-primaria text-center ff-roboto">
+          Search for a movie on our catalog!
+        </legend>
+
+        <fieldset class="d-inline-flex align-items-center flex-column mb-3">
+          <label class="form-label text-light fw-bold fs-4" for="movie-name">
+            Enter the movie name:
+          </label>
+          <input class="form-control w-100" id="movie-name" type="text" placeholder="Movie name" required>
+          <p class="mb-0 invalid-feedback">
+            Movie not found, please try another one.
+          </p>
+        </fieldset>
+
+        <button class="btn botao botao-lg" id="btn-search" type="submit">
+          Search <span class="bi bi-search"></span>
+        </button>
+      </form>
+      
+      <section class="container">
+        <h2 class="w-50 mb-2 text-truncate fs-4 text-light" id="textSearched">
+          You searched for: <strong class="fw-bold text-uppercase clr-primaria"></strong>
+        </h2> <!-- Título da busca aparecerá aqui se algo for achado. -->
+
+        <div>
+          <div class="py-0 row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id="movies">
+          </div> <!-- Filmes aparecerão aqui se for achado. -->
+        </div>
+      </section>
+    </main>
     
     <!-- O footer fica grudado no final da página e anda com o conteúdo. -->
     <footer class="mt-auto bd-top-r10 bgc-preto-neutro">

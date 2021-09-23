@@ -166,6 +166,7 @@ body {
   background-image: url(../images/home/bg-principal.jpg);
   background-attachment: fixed;
 }
+.bg-img.principal.search { position: fixed; }
 
 .linha-h::after {
   content: '';
