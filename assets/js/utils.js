@@ -77,3 +77,18 @@ function paraVideoQuandoFechaModal(modal) {
 function redirecionaParaPagina(pagina) {
   location.replace(pagina);
 }
+
+/** Trata clique no botão de preços da página home. */
+function trataCliqueBotaoPrecos() {
+  $('[data-bs-target="#pricing"]').click((event) => {
+    const span = $(event.target).children('span');
+    
+    if (span.hasClass('bi-eye')) {
+      span.removeClass('bi-eye');
+      span.addClass('bi-eye-slash');
+    } else {
+      span.removeClass('bi-eye-slash');
+      span.addClass('bi-eye');
+    }
+  });
+}
