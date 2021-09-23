@@ -1,0 +1,34 @@
+body{
+  margin:7%;
+  background-color: black;
+}
+
+label{
+  color: yellow;
+  position: relative;
+  font-size: 10p;
+  font-family: Arial, sans-serif;
+}
+
+::-webkit-input-placeholder  {
+  color: grey; 
+  font-style: italic;
+}
+
+input:not([type="checkbox"]){
+  width: 95%;
+  margin-top: 10px;
+  padding: 10px;  
+  border: 1px solid grey;
+  
+}
+
+h1{
+  font-size: 48px;
+  color: yellow;
+  padding: 10px 0;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
