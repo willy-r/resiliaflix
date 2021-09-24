@@ -4,7 +4,7 @@ $('#form').submit((event) => {
   const email = $('#email').val(),
         senha = $('#senha').val();
   
-  if (Usuario.estaCadastrado(email, senha)) {
+  if (Usuario.verificaCadastro(email, senha)) {
     Usuario.logaUsuario();
     redirecionaParaPagina('../../');
   }

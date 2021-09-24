@@ -6,7 +6,6 @@ $('#form').submit((event) => {
   event.target.reset();
 });
 
-
 // Usuários.
 UsuarioController.alteraPaginaQuandoDeslogaUsuario();
 UsuarioController.alteraPaginaUsuarioLogado();

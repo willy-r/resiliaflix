@@ -60,8 +60,10 @@ class FilmeController {
             () => FilmeController._trataCliqueBotaoTrailer(modalTrailer, interfaceModalTrailer, filmeView),
             () => filmeView.mostraErroTrailer(interfaceModalTrailer),
           );
-      } else {
+      } else if (Usuario.temCadastro()) {
         redirecionaParaPagina('views/login/');
+      } else {
+        redirecionaParaPagina('views/register/');
       }
     });
   }

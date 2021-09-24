@@ -12,7 +12,6 @@ $('#form').submit((event) => {
   }
 });
 
-
 // Usuários.
 UsuarioController.alteraPaginaQuandoDeslogaUsuario();
 UsuarioController.alteraPaginaUsuarioLogado();
