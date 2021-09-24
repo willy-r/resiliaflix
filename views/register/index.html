@@ -23,6 +23,7 @@
 
     <!-- CSS local. -->
     <link rel="stylesheet" href="../../assets/style/main.css">
+    <link rel="stylesheet" href="index.css">
 
     <!-- jQuery 3.6 -->
     <script
@@ -121,6 +122,11 @@
           <p class="form-text mb-0" id="email-help">
             We'll send an email to confirm your account.
           </p>
+          <p class="form-text mb-0">
+            <a class="clr-primaria gera-email" id="gera-email" href="#" title="Click to generate a random email">
+              Generate random email
+            </a>
+          </p>
         </fieldset>
         
         <fieldset class="col-md-6">
@@ -129,7 +135,7 @@
           <p class="form-text mb-0" id="password-help">
             Minimum six characters, at least one letter and one number.
           </p>
-          <p class="invalid-feedback" id="erro-senha">
+          <p class="invalid-feedback mb-0" id="erro-senha">
             You must provide a valid password.
           </p>
         </fieldset>
@@ -140,7 +146,7 @@
           <p class="form-text mb-0" id="password-confirm-help">
             Repeat the password to confirm.
           </p>
-          <p class="invalid-feedback" id="erro-confirma-senha">
+          <p class="invalid-feedback mb-0" id="erro-confirma-senha">
             The password must be the same.
           </p>
         </fieldset>
@@ -153,7 +159,7 @@
         <fieldset class="col-md-3">
           <label class="form-label" for="cep">Zip Code</label>
           <input class="form-control" id="cep" type="text" maxlength="9" required>
-          <p class="invalid-feedback" id="erro-cep">
+          <p class="invalid-feedback mb-0" id="erro-cep">
             Please provide a valid zip code.
           </p>
         </fieldset>

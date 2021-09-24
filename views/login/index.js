@@ -1,8 +1,16 @@
 $('#form').submit((event) => {
   event.preventDefault();
+
+  const email = $('#email').val(),
+        senha = $('#senha').val();
   
-  Usuario.logaUsuario();
-  redirecionaParaPagina('../../');
+  if (Usuario.estaCadastrado(email, senha)) {
+    Usuario.logaUsuario();
+    redirecionaParaPagina('../../');
+  }
+
+  $('#erro-login').show('fast');
+  setTimeout(() => $('#erro-login').hide('fast'), 5000);
 });
 
 // Usuários.

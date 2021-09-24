@@ -107,7 +107,7 @@
     </header>
 
     <main class="container d-flex align-items-center h-100 justify-content-center abaixo-header">
-      <form class="p-5 text-light box" id="form" novalidate>
+      <form class="p-5 text-light box" id="form">
         <legend class="h1 clr-primaria titulo-form">Reset your password</legend>
 
         <fieldset class="mb-3">
@@ -116,11 +116,11 @@
           <p class="form-text mb-0" id="email-help">
             Please enter your email account.
           </p>
-          <p class="valid-feedback">
+          <p class="valid-feedback mb-2" id="sucesso-email">
             We have sent an email to you with instructions to reset your password.
           </p>
-          <p class="invalid-feedback">
-            Please enter a valid email.
+          <p class="invalid-feedback mb-2" id="erro-email">
+            This email doesn't exists on our system, please verify and try again.
           </p>
         </fieldset>
 

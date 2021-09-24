@@ -1,4 +1,4 @@
-const duracaoSegundos = 10;
+const duracaoSegundos = 15;
 
 setTimeout(() => {
   if (document.referrer) {
