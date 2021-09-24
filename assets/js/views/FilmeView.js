@@ -86,7 +86,7 @@ class FilmeView {
             <div class="bg-img"></div>
             <div class="row g-0">
               <div class="col-md-4 align-self-center d-flex justify-content-center">
-                <img class="img-fluid rounded shadow img-modal" src="${this.model.img}" alt="Poster of the movie ${this.model.titulo}">
+                <img class="img-fluid rounded shadow img-modal" src="${this.model.defineImagem('../../assets/images/movie-not-found-modal.png')}" alt="Poster of the movie ${this.model.titulo}">
               </div>
               <div class="col-md-8">
                 <div class="card-body">

@@ -127,4 +127,8 @@ class Filme {
   jaTemTrailer() {
     return this.trailer !== null;
   }
+
+  defineImagem(caminhoImg) {
+    return this.img === 'N/A' ? caminhoImg : this.img;
+  }
 }
