@@ -20,14 +20,14 @@ class FilmeController {
 
       Filme.buscaFilmeNaAPI(url, (filmeObj) => {
         const view = new FilmeView(filmeObj);
-        view.insereConteudoNoCartao(cartao);
+        view.insereConteudoNoCartao(cartao, carrosel.id);
 
         FilmeController._trataCliqueNoCartao($(cartao).children('.img-cartao'), view);
 
         // Verifica se foi o último filme, se sim, ativa tudo!
         if (i + 1 === idsFilmes.length) {
           ativaCarrossel(carrosel);
-          ativaTooltips();
+          ativaTooltips(carrosel.id);
         }
       });
     }

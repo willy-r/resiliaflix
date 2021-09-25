@@ -56,9 +56,9 @@ function ativaCarrossel(carrosel) {
   });
 }
 
-/** Ativa todos os tooltips da página atual. */
-function ativaTooltips() {
-  $('[data-tooltip-toggle="tooltip"]').tooltip();
+/** Ativa todos os tooltips do carrossel. */
+function ativaTooltips(carroselId) {
+  $(`[data-tooltip-toggle="tooltip-${carroselId}"]`).tooltip();
 }
 
 function paraVideoQuandoFechaModal(modal) {

@@ -44,13 +44,14 @@ class FilmeView {
    * Insere o conteúdo do filme no cartão.
    * 
    * @param {HTMLElement} cartao Elemento contendo o cartão.
+   * @param {stirng} carroselId ID do carrosel para o tooltip.
    */
-  insereConteudoNoCartao(cartao) {
+  insereConteudoNoCartao(cartao, carroselId) {
     $(cartao).html(`
       <img
         class="rounded img-cartao"
         src="${this.model.img}" alt="Poster of the movie ${this.model.titulo}"
-        data-tooltip-toggle="tooltip" data-bs-custom-class="lh-1 ff-rubik clr-primaria"
+        data-tooltip-toggle="tooltip-${carroselId}" data-bs-custom-class="lh-1 ff-rubik clr-primaria"
         data-bs-toggle="modal" data-bs-target="#info-filme-modal"
         title="${this.model.titulo}"
       >
