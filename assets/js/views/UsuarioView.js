@@ -5,7 +5,7 @@ class UsuarioView {
     // Se ele está logado, ele tem conta.
     $('#nome-usuario').html(`
       <span class="navbar-text">
-        Welcome, <strong class="text-light text-uppercase fw-bold" title="William Rodrigues">${Usuario.obtemNome()}</strong>!
+        Welcome, <strong class="text-light text-uppercase fw-bold" title="${Usuario.obtemNome()}">${Usuario.obtemPrimeiroNome()}</strong>!
       </span>
     `).show('fast');
     $('#auth-logout').show('fast');

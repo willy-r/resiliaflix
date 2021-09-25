@@ -44,7 +44,7 @@ class FilmeView {
    * Insere o conteúdo do filme no cartão.
    * 
    * @param {HTMLElement} cartao Elemento contendo o cartão.
-   * @param {stirng} carroselId ID do carrosel para o tooltip.
+   * @param {string} carroselId ID do carrosel para o tooltip.
    */
   insereConteudoNoCartao(cartao, carroselId) {
     $(cartao).html(`

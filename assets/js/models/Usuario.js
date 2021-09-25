@@ -40,7 +40,15 @@ class Usuario {
   }
 
   static obtemNome() {
-    const primeiroNome = localStorage.getItem('nome').trim().split(' ')[0]
+    const nome = localStorage.getItem('nome').trim().split(' ')
+      .map((nome) => nome[0].toUpperCase() + nome.slice(1).toLowerCase())
+      .join(' ');
+    
+    return nome;
+  }
+
+  static obtemPrimeiroNome() {
+    const primeiroNome = Usuario.obtemNome().split(' ')[0]
     
     return primeiroNome;
   }
