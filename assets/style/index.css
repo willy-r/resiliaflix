@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 62em) {
-  .img-carrosel { height: 85vh; }
+  .img-carrosel { height: 80vh; }
 }
 
 .move-direita > span:nth-child(2) {

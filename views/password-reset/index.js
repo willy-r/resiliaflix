@@ -1,17 +1,16 @@
-const form = $('#form');
-
-form.submit((event) => {
+$('#form').submit((event) => {
   event.preventDefault();
 
-  if (form[0].checkValidity()) {
-    form.addClass('was-validated');
-    setTimeout(() => location.replace('../login/'), 3500);
+  const email = $('#email').val();
+
+  if (Usuario.emailExiste(email)) {
+    $('#sucesso-email').show('slow');
+    setTimeout(() => redirecionaParaPagina('../login/'), 3500);
   } else {
-    form.addClass('was-validated');
-    setTimeout(() => form.removeClass('was-validated'), 3000);
+    $('#erro-email').show('fast');
+    setTimeout(() => $('#erro-email').hide('fast'), 3500);
   }
 });
-
 
 // Usuários.
 UsuarioController.alteraPaginaQuandoDeslogaUsuario();

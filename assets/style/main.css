@@ -276,4 +276,6 @@ body {
   cursor: pointer;
 }
 
+#nome-usuario { display: none; }
+
 .abaixo-header { margin-top: 5rem; }

@@ -10,8 +10,10 @@ function handleClickToOpenModal(elements, movieId) {
   elements.click(() => {
     if (Usuario.estaLogado())
       movieSelected(movieId);
-    else
+    else if (Usuario.temCadastro())
       redirecionaParaPagina('../login/');
+    else
+      redirecionaParaPagina('../register/');
   });
 }
 

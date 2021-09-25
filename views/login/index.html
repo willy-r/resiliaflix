@@ -97,6 +97,8 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-item ms-md-2 ff-rubik" id="nome-usuario">
+              </li> <!-- O nome do usuário será dinâmico e mostrado aqui. -->
               <li class="nav-item" id="auth-logout" title="Click to Sign Out">
                 <span class="nav-link fs-3 tira-ml clr-primaria bi bi-box-arrow-right"></span>
               </li>
@@ -109,7 +111,13 @@
     <main class="container d-flex align-items-center justify-content-center abaixo-header">
       <form class="p-5 text-light my-5 box" id="form">
         <legend class="h1 clr-primaria titulo-form">Sign in</legend>
-        
+
+        <div class="my-3">
+          <p class="mb-2 invalid-feedback" id="erro-login">
+            <strong class="fw-bold">Error:</strong> incorrect email or password.
+          </p>
+        </div>
+
         <fieldset class="mb-3">
           <label class="form-label" for="email">Email address</label>
           <input class="form-control" id="email" type="email" placeholder="example@domain.com" aria-describedby="email-help" required>
@@ -117,13 +125,21 @@
             We'll never share your email with anyone else.
           </p>
         </fieldset>
+
         <fieldset class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input class="form-control" id="password" type="password" required>
+          <label for="senha" class="form-label">Password</label>
+          <input class="form-control" id="senha" type="password" required>
         </fieldset>
-        <div class="mb-4">
+        
+        <div>
           <a href="../password-reset/" class="text-decoration-none clr-primaria text-hover" title="Click here to reset password">
             Forgot password?
+          </a>
+        </div>
+
+        <div class="mb-4">
+          <a href="../register/" class="text-decoration-none clr-primaria text-hover" title="Click here to sign up">
+            Don't have an account?
           </a>
         </div>
 

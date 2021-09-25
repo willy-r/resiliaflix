@@ -1,0 +1,7 @@
+.gera-email {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 250ms;
+}
+
+.gera-email:hover { opacity: .5; }
