@@ -38,4 +38,10 @@ class Usuario {
   static temCadastro() {
     return localStorage.getItem('cadastrado') === '1';
   }
+
+  static obtemNome() {
+    const primeiroNome = localStorage.getItem('nome').trim().split(' ')[0]
+    
+    return primeiroNome;
+  }
 }

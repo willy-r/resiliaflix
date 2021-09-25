@@ -13,6 +13,9 @@ form.submit((event) => {
     Usuario.cadastraUsuario(campoNome.val(), campoEmail.val(), campoSenha.val());
     redirecionaParaPagina('../thanks/');
   }
+
+  // Desloga usuário se ele estiver logado.
+  Usuario.deslogaUsuario();
 });
 
 // Mostra mensagem de erro no campo de senha
