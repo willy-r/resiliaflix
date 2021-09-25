@@ -17,6 +17,8 @@ Project of the module 2 for Resilia.
 
 ResiliaFlix is a website of movies that priorizes you. Be happy, be safe and watch a movie right now!
 
+> Obs: The website uses `localStorage` to save some infos about the authentication, to get full access on the site, you need an account but this account is just a fantasy to simulate a real authentication system, so you can use any email and password when registering, but you need to provide the same credentials to login.
+
 
 ## Contributors ✨
 
